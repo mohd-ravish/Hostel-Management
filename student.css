@@ -54,6 +54,11 @@ body {
 	justify-content: center;
 	align-items: center;
 	width: 100%;
+	margin-top: 6rem;
+}
+
+.form-heading{
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .section-title {
@@ -65,7 +70,6 @@ body {
 .forms {
 	display: flex;
 	align-items: flex-start;
-	margin-top: 30px;
 }
 
 .form-wrapper {
@@ -97,7 +101,7 @@ body {
 }
 
 .switcher {
-	margin-top: 70px;
+	margin-top: 30px;
 	position: relative;
 	cursor: pointer;
 	display: block;
