@@ -64,9 +64,25 @@ body{
 
 
 /* contact */
-#contact {
-    padding: 8% 0% 6% 0%;
+#contact{
+    padding: 15px 0px;
+}
+.line{
+    
+    height: 2px;
+    margin: 0% 15% 0% 15%;
+    background-color: #999;
+    align-items: center;
+}
+.add{
+    padding: 20px 0px 0px 8px;
+}
+
+/* footer */
+#footer {
+    padding: 1% 0% 1% 0%;
     text-align: center;
+    background-color: #999;
 }
 
 .ico {
