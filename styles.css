@@ -47,12 +47,21 @@ body{
 
 /* about  */
 #about{
-    padding: 120px 10px 120px 10px;
+    padding: 100px 10px 100px 10px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 
 /* carousel */
+.photoGallery{
+    padding: 20px 0px;
+    font-size: 1.7rem;
+    font-family: inherit;
+    font-weight: bold;
+}
+.galleryTxtColor{
+    color: #c21717;
+}
 .c-item{
     height: 700px;
 }
