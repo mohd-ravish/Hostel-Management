@@ -53,6 +53,7 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	width: 100%;
 }
 
 .section-title {
@@ -107,7 +108,7 @@ body {
 	font-family: inherit;
 	font-size: 20px;
 	letter-spacing: .5px;
-	color: #6c6c6c;
+	color: #000000;
 	background-color: transparent;
 	border: none;
 	outline: none;
@@ -160,7 +161,7 @@ body {
 }
 
 .form {
-	box-shadow: inset 0 0 0 2px #b0b0b0;
+	box-shadow: inset 0 0 0 2px rgb(189, 189, 189);
 	overflow: hidden;
 	min-width: 260px;
 	margin-top: 50px;
@@ -179,7 +180,7 @@ body {
 
 @keyframes showLogin {
 	0% {
-		background: #acacac;
+		background: rgb(0, 0, 0, 0.2);;
 		transform: translate(40%, 10px);
 	}
 
@@ -188,14 +189,14 @@ body {
 	}
 
 	100% {
-		background-color: #c3c2c2;
+		background-color: rgb(225, 225, 225);
 		transform: translate(35%, -20px);
 	}
 }
 
 @keyframes hideLogin {
 	0% {
-		background-color: #fff;
+		background-color: rgb(0, 0, 0, 0.2);
 		transform: translate(35%, -20px);
 	}
 
@@ -204,7 +205,7 @@ body {
 	}
 
 	100% {
-		background: #d3d2d2;
+		background: rgb(201, 201, 201);
 		transform: translate(40%, 10px);
 	}
 }
@@ -219,7 +220,7 @@ body {
 
 @keyframes showSignup {
 	0% {
-		background: #acacac;
+		background: rgb(0, 0, 0, 0.2);;
 		transform: translate(-40%, 10px) scaleY(.8);
 	}
 
@@ -228,14 +229,14 @@ body {
 	}
 
 	100% {
-		background-color: #c3c2c2;
+		background-color: rgb(225, 225, 225);
 		transform: translate(-35%, -20px) scaleY(1);
 	}
 }
 
 @keyframes hideSignup {
 	0% {
-		background-color: #fff;
+		background-color: rgb(0, 0, 0, 0.2);;
 		transform: translate(-35%, -20px) scaleY(1);
 	}
 
@@ -244,7 +245,7 @@ body {
 	}
 
 	100% {
-		background: #d3d2d2;
+		background: rgb(201, 201, 201);
 		transform: translate(-40%, 10px) scaleY(.8);
 	}
 }
@@ -286,7 +287,7 @@ body {
 
 .input-block label {
 	font-size: 14px;
-	color: #4f4f4f;
+	color: #000000;
 }
 
 .input-block input {
@@ -323,7 +324,7 @@ body {
 
 .btn-login {
 	color: #fefefe;
-	background: #7c7c7c;
+	background: #999999;
 	transform: translateX(-30%);
 }
 
@@ -334,7 +335,7 @@ body {
 
 .btn-signup {
 	color: #fefefe;
-	background: #7c7c7c;
+	background: #999999;
 	transform: translateX(30%);
 }
 
