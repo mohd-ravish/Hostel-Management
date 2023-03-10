@@ -132,7 +132,7 @@ body {
 }
 
 .form-login {
-	animation: hideLogin .3s ease-out forwards;
+	animation: hideLogin .3s ease-nout forwards;
 }
 
 .form-wrapper.is-active .form-login {
