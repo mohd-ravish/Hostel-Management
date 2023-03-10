@@ -5,84 +5,68 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- Font Awesome icons -->
+    <script src="https://kit.fontawesome.com/70f8fc0a39.js" crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@500&display=swap" rel="stylesheet">
+
+    <!-- css -->
     <link rel="stylesheet" href="styles.css">
-    <title>Jamia Millia Islamia</title>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    <!-- Title -->
+    <title>JMI Student Hostel</title>
 </head>
 
 <body>
-    <!-- <nav>
-        <img class="logo" src="Images/logo.png" alt="">
-        <div class="bar" id="bar1"><a>Home</a></div>
-        <div class="bar"><a>Login</a></div>
-        <div class="bar"><a>About</a></div>
-        <div class="bar"><a>Contact</a></div>
-    </nav> -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <img class="navbar-brand logo" src="Images/jmi.png" alt="">
-            <!-- <a class="navbar-brand" href="#">JMI HOSTEL</a> -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navPad navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Login</a>
-                    </li>
-                    <!-- <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li> -->
-                    <!-- <li class="nav-item">
-                        <a class="nav-link disabled">Disabled</a>
-                    </li> -->
-                </ul>
-                <!-- <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form> -->
+    <!-- navbar -->
+    <div class="nav-bg">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <img class="navbar-brand logo" src="Images/logo.png" alt="">
+                <h3 class="heading">JMI HOSTEL</h3>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class=" nav-item">
+                            <a class="navTxt nav-link" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="navTxt nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="navTxt nav-link" href="#contact">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="navTxt loginButton nav-link" href="login.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
-
-    <div>
-        <img class="background" src="Images/bg.jpg" alt="">
+        </nav>
     </div>
-    <!-- <div class="loginbox">
-        <h1>Student Login</h1>
-        <form>
-            <p>Email</p>
-            <input type="email" name="" placeholder="Enter Email">
-            <p>Password</p>
-            <input type="password" name="" placeholder="Enter Password">
-            <input type="submit" name="" value="Login">
-            <a href="#">Forgotten your password?</a><br>
-            <a href="#">Don't have an account?</a>
-        </form>
-    </div> -->
-    <div class="about">
+
+    <!-- Hostel Image -->
+    <div>
+        <img src="Images/main-img.jpg" class="img-fluid background" alt="">
+    </div>
+
+    <!-- About -->
+    <div id="about">
         <h1>ABOUT</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem, dolor. Facere voluptate earum fugiat
+        <p class="aboutTxt">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem, dolor. Facere voluptate
+            earum fugiat
             laborum saepe iste necessitatibus eum repudiandae. Cum neque facilis vel dolorum ut nulla? Nisi fugiat quas
             voluptate accusamus dicta, sint laborum, possimus, vitae ea ipsa praesentium doloribus porro labore atque
             autem dignissimos ipsam assumenda sapiente nesciunt alias cupiditate eum. Voluptatibus dolorum porro
@@ -119,28 +103,56 @@
             tenetur magni neque dignissimos harum labore ipsam rem quisquam, nobis veritatis doloribus! Totam,
             laboriosam ab quaerat aperiam, earum atque dolorem commodi debitis minus repellendus quidem nobis!</p>
     </div>
+
+    <!-- carousel -->
     <div id="carouselExampleFade" class="carousel slide carousel-fade">
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="..." class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="..." class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="..." class="d-block w-100" alt="...">
-          </div>
+            <div class="carousel-item active c-item">
+                <img src="Images/carousel/img5.png" class="d-block w-100 c-img" alt="hostel-image">
+            </div>
+            <div class="carousel-item c-item">
+                <img src="Images/carousel/img4.png" class="d-block w-100 c-img" alt="hostel-image">
+            </div>
+            <div class="carousel-item c-item">
+                <img src="Images/carousel/img3.png" class="d-block w-100 c-img" alt="hostel-image">
+            </div>
+            <div class="carousel-item c-item">
+                <img src="Images/carousel/img2.png" class="d-block w-100 c-img" alt="hostel-image">
+            </div>
+            <div class="carousel-item c-item">
+                <img src="Images/carousel/img1.png" class="d-block w-100 c-img" alt="hostel-image">
+            </div>
+            <div class="carousel-item c-item">
+                <img src="Images/carousel/img8.png" class="d-block w-100 c-img" alt="hostel-image">
+            </div>
+            <div class="carousel-item c-item">
+                <img src="Images/carousel/img7.png" class="d-block w-100 c-img" alt="hostel-image">
+            </div>
+            <div class="carousel-item c-item">
+                <img src="Images/carousel/img6.png" class="d-block w-100 c-img" alt="hostel-image">
+            </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
         </button>
-      </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    </div>
+
+    <!-- contact -->
+    <footer id="contact">
+        <i class="ico fa-brands fa-twitter"></i>
+        <i class="ico fa-brands fa-facebook-f"></i>
+        <i class="ico fa-brands fa-instagram"></i>
+        <i class="ico fa-solid fa-envelope"></i>
+        <p>© 2023 All Rights Reserved Jamia Millia Islamia</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
