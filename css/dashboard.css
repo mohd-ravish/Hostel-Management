@@ -422,7 +422,7 @@ main .recent-orders a{
   justify-content: center;
 }
 
-.right .theme-toggler span active{
+.right .theme-toggler span.active{
   background: var(--color-primary);
   color: white;
   border-radius: var(--border-radius-1);
@@ -598,7 +598,7 @@ main .recent-orders a{
 
   aside{
     position: fixed;
-    left: 0;
+    left: -100%;
     background: var(--color-white);
     width: 18rem;
     z-index: 3;
@@ -606,6 +606,13 @@ main .recent-orders a{
     height: 100vh;
     padding-right: var(--card-padding);
     display: none;
+    animation: showMenu 400ms ease forwards;
+  }
+
+  @keyframes showMenu {
+    to{
+      left: 0;
+    }
   }
 
   aside .logo{
