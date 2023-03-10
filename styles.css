@@ -53,15 +53,6 @@ body{
 
 
 /* carousel */
-.photoGallery{
-    padding: 20px 0px;
-    font-size: 1.7rem;
-    font-family: inherit;
-    font-weight: bold;
-}
-.galleryTxtColor{
-    color: #c21717;
-}
 .c-item{
     height: 700px;
 }
