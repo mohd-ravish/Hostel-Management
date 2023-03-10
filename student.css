@@ -48,9 +48,6 @@ body{
     color: black;
 }
 
-.form-heading{
-    margin-left: 400px;
-}
 	
 
 .forms-section {
@@ -58,6 +55,8 @@ body{
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	width: 100%;
+	margin-top: 8rem;
 }
 
 .section-title {
@@ -107,9 +106,9 @@ body{
 	padding: 0;
 	text-transform: uppercase;
 	font-family: inherit;
-	font-size: 16px;
+	font-size: 19px;
 	letter-spacing: .5px;
-	color: #999;
+	color: #090909fe;
 	background-color: transparent;
 	border: none;
 	outline: none;
