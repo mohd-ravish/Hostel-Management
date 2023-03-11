@@ -1,6 +1,6 @@
 /* background */
 body {
-	background-image: url(./Images/Student-login-img.jpg);
+	background-image: url(Images/Student-login-img.jpg);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: 100% 100%;
@@ -57,7 +57,7 @@ body {
 	margin-top: 6rem;
 }
 
-.form-heading{
+.form-heading {
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -112,7 +112,7 @@ body {
 	font-family: inherit;
 	font-size: 20px;
 	letter-spacing: .5px;
-	color: #000000;
+	color: #ffffff;
 	background-color: transparent;
 	border: none;
 	outline: none;
@@ -184,7 +184,8 @@ body {
 
 @keyframes showLogin {
 	0% {
-		background: rgb(0, 0, 0, 0.2);;
+		background: rgb(0, 0, 0, 0.2);
+		;
 		transform: translate(40%, 10px);
 	}
 
@@ -224,7 +225,8 @@ body {
 
 @keyframes showSignup {
 	0% {
-		background: rgb(0, 0, 0, 0.2);;
+		background: rgb(0, 0, 0, 0.2);
+		;
 		transform: translate(-40%, 10px) scaleY(.8);
 	}
 
@@ -240,7 +242,8 @@ body {
 
 @keyframes hideSignup {
 	0% {
-		background-color: rgb(0, 0, 0, 0.2);;
+		background-color: rgb(0, 0, 0, 0.2);
+		;
 		transform: translate(-35%, -20px) scaleY(1);
 	}
 
@@ -332,7 +335,7 @@ body {
 	transform: translateX(-30%);
 }
 
-.btn-login:hover{
+.btn-login:hover {
 	background-color: #537a47;
 	color: white;
 }
@@ -343,7 +346,7 @@ body {
 	transform: translateX(30%);
 }
 
-.btn-signup:hover{
+.btn-signup:hover {
 	background-color: #537a47;
 	color: white;
 }
