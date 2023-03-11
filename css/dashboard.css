@@ -312,10 +312,12 @@ main .insights svg circle{
   stroke-width: 14;
   stroke-linecap: round;
   transform: translate(5px, 5px);
+  stroke-dashoffset: 0;
+  stroke-dasharray: 222;
 
 }
 
-main .insights .sales svg circle{
+/* main .insights .sales svg circle{
   stroke-dashoffset: -30;
   stroke-dasharray: 200;
 }
@@ -326,9 +328,9 @@ main .insights .expenses svg circle{
 main .insights .income svg circle{
   stroke-dashoffset: 35;
   stroke-dasharray: 110;
-}
+} */
 
-main .insights .progress .number{
+/* main .insights .progress .number{
   position: absolute;
   top: 0;
   left: 0;
@@ -337,6 +339,18 @@ main .insights .progress .number{
   display: flex;
   justify-content: center;
   align-items: center; 
+} */
+
+main .insights .progress .number button{
+  background-color: transparent;
+  position: absolute;
+  justify-content: center;
+  align-items: center; 
+  display: flex;
+  top: 22%;
+  left: 20%;
+  font-size: large;
+  padding: 15% 15%;
 }
 
 main .insights small{
