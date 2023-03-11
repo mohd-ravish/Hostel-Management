@@ -10,7 +10,6 @@ const messageSelector = document.querySelector("#message");
 const settingsSelector = document.querySelector("#settings");
 
 
-
 menuBtn.addEventListener('click', () => {
     sideMenu.style.display = 'block';
 
@@ -25,31 +24,33 @@ themeToggler.addEventListener('click', () => {
     themeToggler.querySelector('span:nth-child(2)').classList.toggle('active');
 })
 
-logoutBtn.addEventListener("click", function() {
+logoutBtn.addEventListener("click", function () {
     logoutBtn.href = "index.html";
 });
 
-dashboardSelector.addEventListener('click', function() {
+dashboardSelector.addEventListener('click', function () {
     dashboardSelector.classList.add("active");
     profileSelector.classList.remove("active");
     messageSelector.classList.remove("active");
     settingsSelector.classList.remove("active");
+    document.querySelector("main").style.display = 'block';
 });
-profileSelector.addEventListener('click', function() {
+profileSelector.addEventListener('click', function () {
     profileSelector.classList.add("active");
     dashboardSelector.classList.remove("active");
     messageSelector.classList.remove("active");
     settingsSelector.classList.remove("active");
+    document.querySelector("main").style.display = 'none';
 });
 
-messageSelector.addEventListener('click', function() {
+messageSelector.addEventListener('click', function () {
     messageSelector.classList.add("active");
     profileSelector.classList.remove("active");
     dashboardSelector.classList.remove("active");
     settingsSelector.classList.remove("active");
 });
 
-settingsSelector.addEventListener('click', function() {
+settingsSelector.addEventListener('click', function () {
     messageSelector.classList.remove("active");
     profileSelector.classList.remove("active");
     dashboardSelector.classList.remove("active");
@@ -60,11 +61,11 @@ settingsSelector.addEventListener('click', function() {
 //     document.querySelectorAll("#dashboard").setAttribute("class","active");
 // })
 
-const n =  new Date();
+const n = new Date();
 const y = n.getFullYear();
 const m = n.getMonth() + 1;
 const d = n.getDate();
 const h = n.getHours();
 const mn = n.getMinutes();
-document.getElementById("date").innerHTML = d + " / " + m + " / " + y + "  -  " + h +" : "+mn;
+document.getElementById("date").innerHTML = d + " / " + m + " / " + y + "  -  " + h + " : " + mn;
 
