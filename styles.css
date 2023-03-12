@@ -47,6 +47,7 @@
 
  /* about  */
  #about {
+     text-align: justify;
      padding: 100px 40px 100px 40px;
      font-family: 'Montserrat', sans-serif;
      text-align: justify;
@@ -54,8 +55,7 @@
 
  #about h1 {
     text-align: center;
-}
-
+ 
  /* carousel */
  .c-item {
      height: 700px;
