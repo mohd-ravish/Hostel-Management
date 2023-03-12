@@ -95,7 +95,7 @@ input[type="password"] {
     font-size: 16px;
 }
 
-.loginbox input[type="submit"] {
+.loginbox input[type="button"] {
     border: none;
     outline: none;
     height: 40px;
@@ -105,7 +105,7 @@ input[type="password"] {
     border-radius: 20px;
 }
 
-.loginbox input[type="submit"]:hover {
+.loginbox input[type="button"]:hover {
     cursor: pointer;
     background: #537a47;
 }
