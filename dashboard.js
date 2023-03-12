@@ -34,6 +34,7 @@ dashboardSelector.addEventListener('click', function () {
     messageSelector.classList.remove("active");
     settingsSelector.classList.remove("active");
     document.querySelector("main").style.display = 'block';
+    document.querySelector("reg").style.display = 'none';
 });
 profileSelector.addEventListener('click', function () {
     profileSelector.classList.add("active");
@@ -41,6 +42,7 @@ profileSelector.addEventListener('click', function () {
     messageSelector.classList.remove("active");
     settingsSelector.classList.remove("active");
     document.querySelector("main").style.display = 'none';
+    document.querySelector("reg").style.display = 'block';
 });
 
 messageSelector.addEventListener('click', function () {
@@ -69,3 +71,24 @@ const h = n.getHours();
 const mn = n.getMinutes();
 document.getElementById("date").innerHTML = d + " / " + m + " / " + y + "  -  " + h + " : " + mn;
 
+
+
+
+
+const form = document.querySelector("form"),
+    nextBtn = form.querySelector(".nextBtn"),
+    backBtn = form.querySelector(".backBtn"),
+    allInput = form.querySelectorAll(".first input");
+
+
+nextBtn.addEventListener("click", () => {
+    allInput.forEach(input => {
+        if (input.value != "") {
+            form.classList.add('secActive');
+        } else {
+            form.classList.remove('secActive');
+        }
+    })
+})
+
+backBtn.addEventListener("click", () => form.classList.remove('secActive'));
