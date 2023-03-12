@@ -51,10 +51,11 @@ messageSelector.addEventListener('click', function () {
 });
 
 settingsSelector.addEventListener('click', function () {
+    settingsSelector.classList.add("active");
     messageSelector.classList.remove("active");
     profileSelector.classList.remove("active");
     dashboardSelector.classList.remove("active");
-    settingsSelector.classList.add("active");
+
 });
 
 // document.querySelectorAll("#dashboard").addEventListener("click", function(){
