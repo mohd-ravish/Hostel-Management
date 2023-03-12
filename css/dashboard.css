@@ -12,6 +12,7 @@
   --color-primary-variant: #111e88;
   --color-dark-variant: #677483;
   --color-background: #f6f6f9;
+  --color-newgreen: rgba(13, 92, 26, 0.895);
   --card-border-radius: 2rem;
   --border-radius-1: 0.4rem;
   --border-radius-2: 0.8rem;
@@ -871,7 +872,7 @@ select {
 }
 
 form button:hover {
-  background-color: var(--color-primary-variant);
+  background-color: var(--color-newgreen) ;
 }
 
 form button i,
