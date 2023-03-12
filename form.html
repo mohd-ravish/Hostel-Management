@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/profile.css">
+    <title>Jamia Millia Islamia</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  
+<section id="form">
+  <div class="row g-3">
+    <div class="col-sm-6">
+      <label for="firstName" class="form-label">First name</label>
+      <input type="text" class="form-control" id="firstName" placeholder="" value="" required="" fdprocessedid="qjkaa3i">
+      <div class="invalid-feedback">
+        Valid first name is required.
+      </div>
+    </div>
+  
+    <div class="col-sm-6">
+      <label for="lastName" class="form-label">Last name</label>
+      <input type="text" class="form-control" id="lastName" placeholder="" value="" required="" fdprocessedid="vvpkmr">
+      <div class="invalid-feedback">
+        Valid last name is required.
+      </div>
+    </div>
+  
+    <div class="col-12">
+      <label for="username" class="form-label">Username</label>
+      <div class="input-group has-validation">
+        <span class="input-group-text">@</span>
+        <input type="text" class="form-control" id="username" placeholder="Username" required="" fdprocessedid="k99hi8">
+      <div class="invalid-feedback">
+          Your username is required.
+        </div>
+      </div>
+    </div>
+  
+    <div class="col-12">
+      <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
+      <input type="email" class="form-control" id="email" placeholder="you@example.com" fdprocessedid="e28vr6">
+      <div class="invalid-feedback">
+        Please enter a valid email address for shipping updates.
+      </div>
+    </div>
+  
+    <div class="col-12">
+      <label for="address" class="form-label">Address</label>
+      <input type="text" class="form-control" id="address" placeholder="1234 Main St" required="" fdprocessedid="xyvzm">
+      <div class="invalid-feedback">
+        Please enter your shipping address.
+      </div>
+    </div>
+  
+    <div class="col-12">
+      <label for="address2" class="form-label">Address 2 <span class="text-muted">(Optional)</span></label>
+      <input type="text" class="form-control" id="address2" placeholder="Apartment or suite" fdprocessedid="weir74">
+    </div>
+  
+    <div class="col-md-5">
+      <label for="country" class="form-label">Country</label>
+      <select class="form-select" id="country" required="" fdprocessedid="wwzegp">
+        <option value="">Choose...</option>
+        <option>United States</option>
+      </select>
+      <div class="invalid-feedback">
+        Please select a valid country.
+      </div>
+    </div>
+  
+    <div class="col-md-4">
+      <label for="state" class="form-label">State</label>
+      <select class="form-select" id="state" required="" fdprocessedid="9c4po">
+        <option value="">Choose...</option>
+        <option>California</option>
+      </select>
+      <div class="invalid-feedback">
+        Please provide a valid state.
+      </div>
+    </div>
+  
+    <div class="col-md-3">
+      <label for="zip" class="form-label">Zip</label>
+      <input type="text" class="form-control" id="zip" placeholder="" required="" fdprocessedid="9v7o7h">
+      <div class="invalid-feedback">
+        Zip code required.
+      </div>
+    </div>
+  </div>
+</section>
+
+
+</body>
