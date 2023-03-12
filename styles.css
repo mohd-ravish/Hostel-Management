@@ -47,9 +47,14 @@
 
  /* about  */
  #about {
+     text-align: justify;
      padding: 100px 40px 100px 40px;
      font-family: 'Montserrat', sans-serif;
  }
+
+ #about h1 {
+    text-align: center;
+}
 
 
  /* carousel */
