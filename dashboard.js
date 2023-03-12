@@ -9,6 +9,7 @@ const profileSelector = document.querySelector("#profile");
 const messageSelector = document.querySelector("#message");
 const settingsSelector = document.querySelector("#settings");
 
+document.querySelector("reg").style.display = 'none';
 
 menuBtn.addEventListener('click', () => {
     sideMenu.style.display = 'block';
