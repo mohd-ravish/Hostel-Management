@@ -1,0 +1,129 @@
+body{
+    background-color:rgba(18, 47, 39, 0.13);
+    justify-content: center;
+    text-align: center;
+}
+
+
+/* navbar */
+.logo{
+    width: 60px;
+}
+
+.headline{
+    padding-top: 10px;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    color: rgb(75, 71, 71);
+}
+
+.navbar{
+    background-color: rgb(0, 0, 0, 0.2);
+    width: 100%;
+}
+
+.navTxt{
+    border: #ffffff solid 1px;
+    border-radius: 10px;
+    margin-right: 35px;
+    font-size: 20px;
+    font-family: Verdana;
+    color: aliceblue;
+}
+
+.navTxt:hover{
+    background-color: white;
+    color: black;
+}
+
+/* buttons */
+
+.buttons{
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.btn{
+    margin: 10px 10px;
+}
+
+.heading{
+    margin: 10px;
+    color: rgb(18, 41, 81);
+}
+
+/* cards */
+.row{
+    width:auto;
+    padding:40px 80px;
+}
+.card{
+    margin: 10px;
+}
+
+/* backgroundPhotos */
+.breakfast{
+    background: linear-gradient(rgba(254, 249, 249, 0.977),rgba(251, 246, 246, 0.9)),url("images/breakfast.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+}
+.lunch{
+    background: linear-gradient(rgba(248, 244, 244, 0.941),rgba(249, 243, 243, 0.9)),url("images/lunch.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.dinner{
+    background: linear-gradient(rgba(248, 241, 241, 0.973),rgba(250, 243, 243, 0.9)),url("images/dinner.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+/* JS clsses to add and remove */
+.sat-size{
+  font-size: 30px;
+}
+.sun-size{
+    font-size: 30px;
+}
+.mon-size{
+    font-size: 30px;
+}
+.tue-size{
+    font-size: 30px;
+}
+.wed-size{
+    font-size: 30px;
+}
+.thu-size{
+    font-size: 30px;
+}
+.fri-size{
+    font-size: 30px;
+}
+
+/* footer */
+#footer {
+    padding: 20px 0px 20px 0px;
+    text-align: center;
+    background-color: #cdcdcd;
+}
+
+.ico {
+    padding: 0px 8px 16px 0px;
+}
+
+.fa-twitter {
+    color: #00acee;
+}
+
+.fa-facebook {
+    color: #3b5998;
+}
+
+.fa-instagram {
+    color: #cd486b;
+}
+
+.fa-envelope {
+    color: #be5b52;
+}
