@@ -1,55 +1,47 @@
 body {
     box-sizing: border-box;
+    background-color: rgb(239, 239, 239);
 }
 
 /* navbar */
-a {
-    text-decoration: none;
+.heading {
+    margin-left: 20px;
+    padding-top: 10px;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    color: rgb(255, 255, 255);
 }
 
-li {
-    list-style: none;
+.nav-bg{
+    position: sticky;
+    top: 0;
 }
 
 .navbar {
-    position: sticky;
-    top: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 8px;
     background-color: rgb(67, 67, 67);
-    color: #fff;
+    width: 100%;
 }
 
-.nav-links a {
-    color: #fff;
-}
-
-/* LOGO */
-.logo {
-    font-size: 28px;
-    padding-left: 20px;
-}
-
-/* NAVBAR MENU */
-.menu {
-    display:flex;
-    gap: 1em;
+.navTxt {
+    margin-right: 50px;
     font-size: 18px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: aliceblue;
 }
 
-.menu li a:hover {
-    color: #c6c6c6;
+.navTxt:hover{
+    color: rgb(211, 211, 211);
 }
 
-.menu li {
-    padding: 8px 10px 2px 10px;
+.loginButton {
+    font-size: 18px;
+    margin-right: 70px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    color: black;
 }
 
-
-.modeOfPayment {
-    padding-top: 100px
+.loginButton:hover {
+    background-color: rgb(203, 203, 203);
 }
 
 h2 {
@@ -76,6 +68,11 @@ h4 {
     text-align: justify;
     padding: 120px 300px 0px 300px;
     line-height: 30px;
+}
+
+.payment {
+    text-align: left;
+    padding-top: 100px
 }
 
 h5 {

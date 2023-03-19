@@ -19,7 +19,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@500&display=swap" rel="stylesheet" />
 
   <!-- css -->
-  <link rel="stylesheet" href="mess.css" />
+  <link rel="stylesheet" href="css/mess.css" />
 
   <!-- Title -->
   <title>Mess Menu</title>
@@ -27,20 +27,46 @@
 
 <body>
   <!-- navbar -->
-  <nav class="navbar">
-    <!-- LOGO -->
-    <div class="logo">JMI HOSTEL</div>
-    <!-- NAVIGATION MENU -->
-    <ul class="nav-links">
-      <!-- NAVIGATION MENUS -->
-      <div class="menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="mess.html">Mess</a></li>
-        <li><a href="fee.html">Fee Structure</a></li>
-        <li><a href="#">Rukes and regulations</a></li>
+  <div class="nav-bg">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <h3 class="heading">JMI HOSTEL</h3>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto">
+            <li class=" nav-item">
+              <a class="navTxt nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class=" nav-item">
+              <a class="navTxt nav-link" aria-current="page" href="mess.html">Mess</a>
+            </li>
+            <li class=" nav-item">
+              <a class="navTxt nav-link" aria-current="page" href="fee.html">Fee Structure</a>
+            </li>
+            <li class="nav-item">
+              <a class="navTxt nav-link" href="#">Rules & Regulations</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle loginButton" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Login
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="login.html">Admin</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="student.html">Student</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
       </div>
-    </ul>
-  </nav>
+    </nav>
+  </div>
 
   <!-- buttons -->
   <section class="buttons">
@@ -53,7 +79,7 @@
     <button type="button" class="btn btn-primary fri">Friday</button>
   </section>
 
-  <h1 class="heading">Minimum expected menu on Saturday</h1>
+  <h1 class="heading2">Minimum expected menu on Saturday</h1>
 
   <!-- cards -->
   <section>
