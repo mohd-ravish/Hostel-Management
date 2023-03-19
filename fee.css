@@ -1,0 +1,97 @@
+body {
+    box-sizing: border-box;
+}
+
+/* navbar */
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    background-color: rgb(67, 67, 67);
+    color: #fff;
+}
+
+.nav-links a {
+    color: #fff;
+}
+
+/* LOGO */
+.logo {
+    font-size: 28px;
+    padding-left: 20px;
+}
+
+/* NAVBAR MENU */
+.menu {
+    display:flex;
+    gap: 1em;
+    font-size: 18px;
+}
+
+.menu li a:hover {
+    color: #c6c6c6;
+}
+
+.menu li {
+    padding: 8px 10px 2px 10px;
+}
+
+
+.modeOfPayment {
+    padding-top: 100px
+}
+
+h2 {
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+h4 {
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+.fee {
+    text-align: center;
+    padding: 40px 300px 0px 300px;
+}
+
+.mess {
+    text-align: center;
+    padding: 120px 300px 0px 300px;
+}
+
+.schedule {
+    text-align: justify;
+    padding: 120px 300px 0px 300px;
+    line-height: 30px;
+}
+
+h5 {
+    padding-bottom: 50px;
+}
+
+footer {
+    background-color: rgb(225, 224, 224);
+    padding: 40px 300px 10px 300px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    row-gap: 10px;
+    padding-bottom: 30px;
+}
+
