@@ -1,5 +1,5 @@
 body {
-    background-color: rgba(18, 47, 39, 0.13);
+    background-color: rgb(239, 239, 239);
     text-align: center;
     box-sizing: border-box;
 }
@@ -122,4 +122,16 @@ body {
 
 .fri-size {
     font-size: 30px;
+}
+
+footer {
+    background-color: rgb(225, 224, 224);
+    padding: 40px 300px 10px 300px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    row-gap: 10px;
+    padding-bottom: 30px;
 }
