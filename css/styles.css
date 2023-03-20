@@ -49,13 +49,19 @@
      text-align: justify;
      padding: 100px 40px 100px 40px;
      font-family: 'Montserrat', sans-serif;
-     text-align: justify;
  }
 
  #about h1 {
-    text-align: center;
+     text-align: center;
  }
- 
+
+iframe{
+    float: right;
+    width: 500px;
+    height: 300px;
+    padding: 10px 0px 0px 10px;
+ }
+
  /* carousel */
  .c-item {
      height: 700px;
