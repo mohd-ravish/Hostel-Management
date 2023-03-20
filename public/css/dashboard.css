@@ -118,7 +118,7 @@ b {
   color: var(--color-dark);
 }
 
-button{
+button {
   color: var(--color-dark);
 }
 
@@ -723,7 +723,7 @@ main .recent-orders a {
 
 /* registration  */
 
-reg{
+reg {
   margin-top: 3.5rem;
 }
 
@@ -747,7 +747,7 @@ reg{
   color: var(--color-dark);
 } */
 
-.registration h1{
+.registration h1 {
   /* text-decoration: underline; */
   color: var(--color-success);
   font-family: 'Poppins';
@@ -881,7 +881,7 @@ select {
 }
 
 form button:hover {
-  background-color: var(--color-newgreen) ;
+  background-color: var(--color-newgreen);
 }
 
 form button i,

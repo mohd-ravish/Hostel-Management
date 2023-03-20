@@ -27,7 +27,7 @@ themeToggler.addEventListener('click', () => {
 })
 
 logoutBtn.addEventListener("click", function () {
-    logoutBtn.href = "index.html";
+    logoutBtn.href = "/login";
 });
 
 dashboardSelector.addEventListener('click', function () {
