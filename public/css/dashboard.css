@@ -680,6 +680,18 @@ main .recent-orders a {
     margin: 0;
   }
 
+  .registration form {
+    overflow-y: scroll;
+  }
+
+  .registration form::-webkit-scrollbar {
+    display: none;
+  }
+
+  form .fields .input-field {
+    width: calc(100% / 2 - 15px);
+  }
+
   .right {
     width: 94%;
     margin: 0 auto 4rem;
@@ -854,7 +866,7 @@ select {
 }
 
 .input-field input[type="date"]:valid {
-  color: var(--color-white);
+  color: var(--color-dark);
 }
 
 .registration form button,
@@ -903,19 +915,9 @@ form .buttons button,
   margin-right: 14px;
 }
 
-@media (max-width: 750px) {
-  .registration form {
-    overflow-y: scroll;
-  }
+/* @media (max-width: 750px) {
 
-  .registration form::-webkit-scrollbar {
-    display: none;
-  }
-
-  form .fields .input-field {
-    width: calc(100% / 2 - 15px);
-  }
-}
+} */
 
 @media (max-width: 550px) {
   form .fields .input-field {
