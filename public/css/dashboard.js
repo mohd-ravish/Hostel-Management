@@ -11,7 +11,6 @@ const settingsSelector = document.querySelector("#settings");
 
 document.querySelector("reg").style.display = 'none';
 
-
 menuBtn.addEventListener('click', () => {
     sideMenu.style.display = 'block';
 
@@ -27,7 +26,7 @@ themeToggler.addEventListener('click', () => {
 })
 
 logoutBtn.addEventListener("click", function () {
-    logoutBtn.href = "index.html";
+    logoutBtn.href = "/student";
 });
 
 dashboardSelector.addEventListener('click', function () {
@@ -52,17 +51,13 @@ messageSelector.addEventListener('click', function () {
     profileSelector.classList.remove("active");
     dashboardSelector.classList.remove("active");
     settingsSelector.classList.remove("active");
-    document.querySelector("reg").style.display = 'none';
-    document.querySelector("main").style.display = 'none';
 });
 
 settingsSelector.addEventListener('click', function () {
-    settingsSelector.classList.add("active");
     messageSelector.classList.remove("active");
     profileSelector.classList.remove("active");
     dashboardSelector.classList.remove("active");
-    document.querySelector("reg").style.display = 'none';
-    document.querySelector("main").style.display = 'none';
+    settingsSelector.classList.add("active");
 });
 
 // document.querySelectorAll("#dashboard").addEventListener("click", function(){
@@ -76,6 +71,8 @@ const d = n.getDate();
 const h = n.getHours();
 const mn = n.getMinutes();
 document.getElementById("date").innerHTML = d + " / " + m + " / " + y + "  -  " + h + " : " + mn;
+
+
 
 
 
