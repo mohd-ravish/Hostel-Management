@@ -1,0 +1,137 @@
+body {
+    background-color: rgb(239, 239, 239);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* navbar */
+.logo {
+    width: 60px;
+}
+
+.heading {
+    margin-left: 20px;
+    padding-top: 10px;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+.nav-bg {
+    position: sticky;
+    top: 0;
+}
+
+.navbar {
+    background-color: rgb(67, 67, 67);
+    width: 100%;
+}
+
+.navTxt {
+    margin-right: 50px;
+    font-size: 18px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: aliceblue;
+}
+
+.navTxt:hover {
+    color: rgb(211, 211, 211);
+}
+
+.loginButton {
+    font-size: 18px;
+    margin-right: 70px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    color: black;
+}
+
+.loginButton:hover {
+    background-color: rgb(203, 203, 203);
+}
+
+/* buttons */
+.buttons {
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    margin: 10px 10px;
+}
+
+.heading2 {
+    margin: 10px;
+    color: rgb(255, 255, 255);
+}
+
+/* cards */
+.row {
+    /* width:auto; */
+    padding: 40px 80px;
+}
+
+.card {
+    margin: 10px;
+}
+
+/* backgroundPhotos */
+.breakfast {
+    background: linear-gradient(rgba(254, 249, 249, 0.977), rgba(251, 246, 246, 0.9)), url("images/breakfast.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+}
+
+.lunch {
+    background: linear-gradient(rgba(248, 244, 244, 0.941), rgba(249, 243, 243, 0.9)), url("images/lunch.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.dinner {
+    background: linear-gradient(rgba(248, 241, 241, 0.973), rgba(250, 243, 243, 0.9)), url("images/dinner.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+/* JS clsses to add and remove */
+.sat-size {
+    font-size: 30px;
+}
+
+.sun-size {
+    font-size: 30px;
+}
+
+.mon-size {
+    font-size: 30px;
+}
+
+.tue-size {
+    font-size: 30px;
+}
+
+.wed-size {
+    font-size: 30px;
+}
+
+.thu-size {
+    font-size: 30px;
+}
+
+.fri-size {
+    font-size: 30px;
+}
+
+footer {
+    background-color: rgb(225, 224, 224);
+    padding: 40px 300px 10px 300px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    row-gap: 10px;
+    padding-bottom: 30px;
+}

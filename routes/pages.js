@@ -14,6 +14,18 @@ router.get('/login', (req, res) => {
     res.render("login")
 });
 
+router.get('/mess', (req, res) => {
+    res.render("mess")
+});
+
+router.get('/fee', (req, res) => {
+    res.render("fee")
+});
+
+router.get('/rules', (req, res) => {
+    res.render("rules")
+});
+
 router.get('/dashboard', authController.studentlogin, (req, res) => {
     if (req.user) {
         res.render("dashboard");
