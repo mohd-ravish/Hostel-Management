@@ -7,11 +7,11 @@ router.get('/', (req, res) => {
 });
 
 router.get('/student', (req, res) => {
-    res.render("student")
+    res.render("student", {error : req.flash('error'), success : req.flash('success')})
 });
 
 router.get('/login', (req, res) => {
-    res.render("login")
+    res.render("login", {error : req.flash('error')});
 });
 
 router.get('/mess', (req, res) => {

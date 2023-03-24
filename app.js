@@ -2,8 +2,9 @@ const express = require("express");
 const path = require("path")
 const mysql = require("mysql");
 const dotenv = require("dotenv").config();
+const session = require("express-session");
+const flash = require("connect-flash");
 const app = express();
-
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
@@ -13,6 +14,15 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 // app.use(cookieParser());
+app.use(session({
+    secret: 'secret',
+    cookie: {secure: false, maxAge: 60000},
+    resave:false,
+    saveUninitialized: false
+}));
+
+app.use(flash());
+
 const connection = mysql.createConnection({
     host: process.env.HOST,
     user: process.env.DATABASE_USER,

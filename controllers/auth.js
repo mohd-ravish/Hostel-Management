@@ -24,7 +24,7 @@ exports.adlogin = function (req, res) {
     var username = req.body.username;
     var password = req.body.password;
 
-    connection.query("select * from loginuser where user_name = ? and user_pass = ?", [username, password], function (error, results, fields) {
+    connection.query("select * from admin where user_name = ? and user_pass = ?", [username, password], function (error, results, fields) {
         if (results.length > 0) {
             //   return res.sendFile(__dirname + "/dashboard.html", {
             //   })
@@ -37,9 +37,8 @@ exports.adlogin = function (req, res) {
         } else {
                 // res.redirect("/");
                 // return;
-                return res.render("login",{
-                  message: 'wrongg'
-              })
+                req.flash('error', 'Email or password is incorrect!');
+                return res.redirect("/login");
         }
         res.end();
     })
@@ -54,10 +53,8 @@ exports.studentregs = async function (req, res) {
             console.log(err);
         } else {
             if (results.length > 0) {
-                return res.render("student", {
-                    message: 'The email is already in use'
-                })
-
+                req.flash('error', 'The email is already in use!');
+                return res.redirect("/student");
             }
         }
 
@@ -68,9 +65,8 @@ exports.studentregs = async function (req, res) {
             if (error) {
                 console.log(error);
             } else {
-                return res.render("student", {
-                    message: 'User registered'
-                });
+                req.flash('success', 'User Registered!');
+                return res.redirect("/student");
             }
         })
     })
@@ -82,15 +78,14 @@ exports.studentlogin = async function (req, res) {
         var susername = req.body.susername;
         var suserpass = req.body.suserpass;
         if (!susername || !suserpass) {
-            return res.status(400).render("student",{
-                message: "Please Provide an email and password"
-            })
+                req.flash('error', 'Please Provide an email or password!');
+                return res.redirect("/student");
         }
         connection.query('SELECT * from loginuser WHERE user_name = ?', [susername], async (err, results) => {
             console.log(results[0]);
             if (!results || !results.length || !await bcrypt.compare(suserpass, results[0].user_pass)) {
-                return res.status(401).render("student",{
-                    message: 'Email or Password is incorrect'});
+                req.flash('error', 'Email or password is incorrect!');
+                return res.redirect("/student");
 
             } else {
                 return res.status(200).render("dashboard",{
