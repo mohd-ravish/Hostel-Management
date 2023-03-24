@@ -73,6 +73,7 @@ body {
 .card {
     margin: 10px;
     z-index: -1;
+    height: 450px;
 }
 
 /* backgroundPhotos */
