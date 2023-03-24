@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@500&display=swap" rel="stylesheet">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="css/student.css">
     <title>Student</title>
@@ -35,7 +35,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto">
                         <li class=" nav-item">
-                            <a class="navTxt nav-link" aria-current="page" href="index.html">Home</a>
+                            <a class="navTxt nav-link" aria-current="page" href="/">Home</a>
                         </li>
                     </ul>
                 </div>
@@ -43,25 +43,43 @@
         </nav>
     </div>
 
+    
+
     <!-- Form  -->
     <div class="forms-section">
+        <% if(success.length> 0 || error.length> 0) {%>
+            <p><br><br><br></p>
+        <% } %>
+
         <h1 class="section-title form-heading">Student Account</h1>
+        <% if(error.length>0) {%>
+            <br>
+            <div class="alert alert-danger message">
+                <%= error %>
+            </div>
+            <% } %>
+        <% if(success.length>0) {%>
+        <br>
+        <div class="alert alert-success message">
+            <%= success %>
+        </div>
+        <% } %>
         <div class="forms">
             <div class="form-wrapper is-active">
                 <button type="button" class="switcher switcher-login"> Login <span class="underline"></span> </button>
-                <form class="form form-login">
+                <form action="/studentlogin" method="POST" class="form form-login">
                     <fieldset>
                         <legend>Please, enter your email and password for login.</legend>
                         <div class="input-block">
                             <label class="input-text" for="login-email">E-mail</label>
-                            <input id="login-email" type="email" required>
+                            <input id="login-email" name="susername" type="email" required>
                         </div>
                         <div class="input-block">
                             <label class="input-text" for="login-password">Password</label>
-                            <input id="login-password" type="password" required>
+                            <input id="login-password" name="suserpass" type="password" required>
                         </div>
                     </fieldset>
-                    <button type="submit" class="btn-login">Login</button>
+                    <button type="submit" name="submit" class="btn-login">Login</button>
                 </form>
             </div>
             <div class="form-wrapper">
@@ -69,23 +87,23 @@
                     Sign Up
                     <span class="underline"></span>
                 </button>
-                <form class="form form-signup">
+                <form action="/studentregs" method="POST" class="form form-signup">
                     <fieldset>
                         <legend>Please, enter your email, password and password confirmation for sign up.</legend>
                         <div class="input-block">
                             <label class="input-text" for="signup-email">E-mail</label>
-                            <input id="signup-email" type="email" required>
+                            <input id="signup-email" name="rusername" type="email" required>
                         </div>
                         <div class="input-block">
                             <label class="input-text" for="signup-password">Password</label>
-                            <input id="signup-password" type="password" required>
+                            <input id="signup-password" name="ruserpass" type="password" required>
                         </div>
                         <div class="input-block">
                             <label class="input-text" for="signup-password-confirm">Confirm password</label>
-                            <input id="signup-password-confirm" type="password" required>
+                            <input id="signup-password-confirm" name="ruserpassc" type="password" required>
                         </div>
                     </fieldset>
-                    <button type="submit" class="btn-signup">Continue</button>
+                    <button type="submit" name="submit" class="btn-signup">Continue</button>
                 </form>
             </div>
         </div>
@@ -99,6 +117,12 @@
                 this.parentElement.classList.add('is-active')
             })
         })
+        let message = $('.message');
+        if (message.length > 0) {
+            setTimeout(function(){
+                message.fadeOut('slow');
+            }, 5000);
+        }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
