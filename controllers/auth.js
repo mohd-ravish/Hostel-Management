@@ -31,14 +31,14 @@ exports.adlogin = function (req, res) {
             // res.redirect("/dashboard");
             // return;
             // console.log(results)
-            return res.render("admin-dashboard", {
+                return res.render("admin-dashboard", {
                 message: 'admin logged in'
-            });
+                });
         } else {
-            // res.redirect("/");
-            // return;
-            req.flash('error', 'Email or password is incorrect!');
-            return res.redirect("/login");
+                // res.redirect("/");
+                // return;
+                req.flash('error', 'Email or password is incorrect!');
+                return res.redirect("/login");
         }
         res.end();
     })
@@ -78,8 +78,8 @@ exports.studentlogin = async function (req, res) {
         var susername = req.body.susername;
         var suserpass = req.body.suserpass;
         if (!susername || !suserpass) {
-            req.flash('error', 'Please Provide an email or password!');
-            return res.redirect("/student");
+                req.flash('error', 'Please Provide an email or password!');
+                return res.redirect("/student");
         }
         connection.query('SELECT * from loginuser WHERE user_name = ?', [susername], async (err, results) => {
             console.log(results[0]);
@@ -88,9 +88,8 @@ exports.studentlogin = async function (req, res) {
                 return res.redirect("/student");
 
             } else {
-                return res.status(200).render("dashboard", {
-                    data: results
-                });
+                return res.status(200).render("dashboard",{
+                    message: ""});
             }
         })
     } catch (err) {
@@ -98,7 +97,7 @@ exports.studentlogin = async function (req, res) {
     }
 }
 
-exports.registration = async function (req, res) {
+exports.registration = async function(req,res){
     var stud_name = req.body.stud_name;
     var dob = req.body.dob;
     var father_name = req.body.father_name;
@@ -119,14 +118,14 @@ exports.registration = async function (req, res) {
     var ward = req.body.ward;
 
 
-    connection.query('SELECT * from student WHERE  email = ?', [email], async (err, results) => {
+    connection.query('SELECT * from student WHERE  = ?', [stud_name], async (err, results) => {
         if (err) {
             console.log(err);
-        }
+        } 
         else {
             if (results.length > 0) {
-                return res.render("dashboard"),
-                    res.render('dashboard', { data1: results[0] });
+                return res.render("dashboard",{
+                    data: result});
             }
         }
 
@@ -135,25 +134,8 @@ exports.registration = async function (req, res) {
             if (error) {
                 console.log(error);
             } else {
-                console.log(results[0]);
-                return res.render("dashboard", { data1: results[0] });
+                return res.render("dashboard");
             }
         })
     })
 }
-
-// exports.registration = async function (req, res) {
-//     var email = req.body.email;
-
-
-//     connection.query('SELECT * from student WHERE  email = ?', [email], async (err, results) => {
-//         if (err) {
-//             console.log(err);
-//         }
-//         else {
-//             if (results.length > 0) {
-//                 return res.render("dashboard", { try1: results });
-//             }
-//         }
-//     })
-// }
