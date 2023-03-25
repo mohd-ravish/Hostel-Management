@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- favicon -->
+  <link rel="icon" type="image/x-icon" href="../Images/logo.png">
+
+  <!-- Font Awesome icons -->
+  <script src="https://kit.fontawesome.com/70f8fc0a39.js" crossorigin="anonymous"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@500&display=swap" rel="stylesheet" />
+
+  <!-- css -->
+  <link rel="stylesheet" href="complaint.css" />
+
+  <!-- Title -->
+  <title>Complaint Form</title>
+</head>
+
+<body>
+  <!-- navbar -->
+  <div class="topnav" id="myTopnav">
+    <h2 class="heading">JMI HOSTEL</h2>
+    <a href="../index.html" class="active">Home</a>
+    <a href="../messMenu/mess.html">Mess</a>
+    <a href="../index.html#contact">Contact</a>
+    <a href="../index.html#about">About</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+    </a>
+</div>
+
+  <!-- complaint form -->
+  <div class="complain">
+    <div class="contain">
+        <h1>Complaint Form</h1>
+        <form action="/" method="POST">
+          <label for="firstname">First Name</label>
+          <input type="text" id="firstname" name="firstname" placeholder="Enter your first name">
+          <label for="lastname">Last Name</label>
+          <input type="text" id="lastname" name="lastname" placeholder="Enter your last name">
+  
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="Subject of complaint" required>
+  
+          <label for="complaint">Complaint</label>
+          <textarea id="complaint" name="complaint" placeholder="Enter your complaint ..." required></textarea>
+  
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+</div>
+
+<!-- footer -->
+<footer>
+    <div class="container">
+        <div>
+            <h3>Campus A</h3>
+            <div>New Boys</div>
+            <div>Allamah Iqbal</div>
+            <div>Kellat</div>
+
+        </div>
+        <div>
+            <h3>Campus B</h3>
+            <div>Ambedkar</div>
+            <div>FRK</div>
+            <div>Khwaja</div>
+        </div>
+    </div>
+    <p>© 2023 All Rights Reserved Jamia Millia Islamia</p>
+</footer>
+
+
+<!-- javascript -->
+<script>function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+</script>
+</body>
+</html>
