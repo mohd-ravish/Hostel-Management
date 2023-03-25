@@ -38,6 +38,20 @@ body {
     color: black;
 }
 
+.message-box{
+    top: 20%;
+    left: 50%;
+    right: 50%;
+    margin-bottom: 40%;
+    width: 400px;
+    justify-content: center;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 30px 30px;
+    font-family: Verdana;
+    border-radius: 5px;
+}
 
 /* loginbox */
 .loginbox {
@@ -95,7 +109,7 @@ input[type="password"] {
     font-size: 16px;
 }
 
-.loginbox input[type="button"] {
+.loginbox input[type="submit"] {
     border: none;
     outline: none;
     height: 40px;
@@ -105,7 +119,7 @@ input[type="password"] {
     border-radius: 20px;
 }
 
-.loginbox input[type="button"]:hover {
+.loginbox input[type="submit"]:hover {
     cursor: pointer;
     background: #537a47;
 }
