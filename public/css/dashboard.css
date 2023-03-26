@@ -744,11 +744,10 @@ reg {
   margin-top: 1.4rem;
   position: relative;
   max-width: 900px;
-  height: auto;
   width: 100%;
   border-radius: 6px;
   padding: 30px;
-  margin: 0 auto;
+  margin: 0 15px;
   background-color: var(--color-white);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
@@ -924,61 +923,4 @@ form .buttons button,
   form .fields .input-field {
     width: 100%;
   }
-}
-
-
-/*  compaint   */
-
-
-.complain {
-  margin-top: 3.5rem;
-
-}
-
-.contain {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: var(--color-white);
-  border-radius: 5px;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
-}
-
-h1 {
-  text-align: center;
-  color: var(--color-dark);
-}
-
-label {
-  display: block;
-  margin-bottom: 10px;
-  color: var(--color-dark-variant);
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid var(--color-dark-variant);
-  border-radius: 5px;
-}
-
-textarea {
-  height: 100px;
-}
-
-button[type="submit"] {
-  background-color: var(--color-dark);
-  color: var(--color-white);
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button[type="submit"]:hover {
-  background-color: var(--color-success);
 }
