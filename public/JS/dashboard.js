@@ -8,8 +8,12 @@ const dashboardSelector = document.querySelector("#dashboard");
 const profileSelector = document.querySelector("#profile");
 const messageSelector = document.querySelector("#message");
 const settingsSelector = document.querySelector("#settings");
+const complainSelector = document.querySelector("#complain");
+const paymentSelector = document.querySelector("#payment");
 
 document.querySelector("reg").style.display = 'none';
+document.querySelector("complain").style.display = 'none';
+document.querySelector("payment").style.display = 'none';
 
 menuBtn.addEventListener('click', () => {
     sideMenu.style.display = 'block';
@@ -31,29 +35,67 @@ logoutBtn.addEventListener("click", function () {
 
 dashboardSelector.addEventListener('click', function () {
     dashboardSelector.classList.add("active");
+    paymentSelector.classList.remove("active");
     profileSelector.classList.remove("active");
+    complainSelector.classList.remove("active");
     messageSelector.classList.remove("active");
     settingsSelector.classList.remove("active");
     document.querySelector("main").style.display = 'block';
     document.querySelector("reg").style.display = 'none';
+    document.querySelector("complain").style.display = 'none';
+    document.querySelector("complain").style.display = 'none';
 });
 profileSelector.addEventListener('click', function () {
     profileSelector.classList.add("active");
+    paymentSelector.classList.remove("active");
+    complainSelector.classList.remove("active");
     dashboardSelector.classList.remove("active");
     messageSelector.classList.remove("active");
     settingsSelector.classList.remove("active");
     document.querySelector("main").style.display = 'none';
     document.querySelector("reg").style.display = 'block';
+    document.querySelector("complain").style.display = 'none';
+    document.querySelector("complain").style.display = 'none';
+});
+
+complainSelector.addEventListener('click', function () {
+    complainSelector.classList.add("active");
+    paymentSelector.classList.remove("active");
+    profileSelector.classList.remove("active");
+    dashboardSelector.classList.remove("active");
+    messageSelector.classList.remove("active");
+    settingsSelector.classList.remove("active");
+    document.querySelector("main").style.display = 'none';
+    document.querySelector("reg").style.display = 'none';
+    document.querySelector("complain").style.display = 'block';
+    document.querySelector("payment").style.display = 'none';
+});
+
+paymentSelector.addEventListener('click', function () {
+    paymentSelector.classList.add("active");
+    profileSelector.classList.remove("active");
+    complainSelector.classList.remove("active");
+    dashboardSelector.classList.remove("active");
+    messageSelector.classList.remove("active");
+    settingsSelector.classList.remove("active");
+    document.querySelector("main").style.display = 'none';
+    document.querySelector("reg").style.display = 'none';
+    document.querySelector("complain").style.display = 'none';
+    document.querySelector("payment").style.display = 'block';
 });
 
 messageSelector.addEventListener('click', function () {
     messageSelector.classList.add("active");
+    complainSelector.classList.remove("active");
+    paymentSelector.classList.remove("active");
     profileSelector.classList.remove("active");
     dashboardSelector.classList.remove("active");
     settingsSelector.classList.remove("active");
 });
 
 settingsSelector.addEventListener('click', function () {
+    complainSelector.classList.remove("active");
+    paymentSelector.classList.remove("active");
     messageSelector.classList.remove("active");
     profileSelector.classList.remove("active");
     dashboardSelector.classList.remove("active");
@@ -82,7 +124,7 @@ const form = document.querySelector("form"),
     allInput = form.querySelectorAll(".first input");
 
 
-    nextBtn.addEventListener("click", () => {
+nextBtn.addEventListener("click", () => {
     allInput.forEach(input => {
         if (input.value != "") {
             form.classList.add('secActive');
@@ -90,7 +132,7 @@ const form = document.querySelector("form"),
             form.classList.remove('secActive');
         }
     })
-    
+
 })
 
 backBtn.addEventListener("click", () => form.classList.remove('secActive'));
