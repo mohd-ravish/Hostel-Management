@@ -744,10 +744,11 @@ reg {
   margin-top: 1.4rem;
   position: relative;
   max-width: 900px;
+  height: auto;
   width: 100%;
   border-radius: 6px;
   padding: 30px;
-  margin: 0 15px;
+  margin: 0 auto;
   background-color: var(--color-white);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }

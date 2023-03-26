@@ -7,11 +7,11 @@ const logoutBtn = document.querySelector('.logout');
 const dashboardSelector = document.querySelector("#dashboard");
 const profileSelector = document.querySelector("#profile");
 const messageSelector = document.querySelector("#message");
-const complainSelector = document.querySelector("#complain");
+// const complainSelector = document.querySelector("#complain");
 const settingsSelector = document.querySelector("#settings");
 
 document.querySelector("reg").style.display = 'none';
-document.querySelector("complaint").style.display = 'none';
+// document.querySelector("complaint").style.display = 'none';
 
 menuBtn.addEventListener('click', () => {
     sideMenu.style.display = 'block';
@@ -33,7 +33,7 @@ logoutBtn.addEventListener("click", function () {
 
 dashboardSelector.addEventListener('click', function () {
     dashboardSelector.classList.add("active");
-    complainSelector.classList.remove("active");
+    // complainSelector.classList.remove("active");
     profileSelector.classList.remove("active");
     messageSelector.classList.remove("active");
     settingsSelector.classList.remove("active");
@@ -43,7 +43,7 @@ dashboardSelector.addEventListener('click', function () {
 });
 profileSelector.addEventListener('click', function () {
     profileSelector.classList.add("active");
-    complainSelector.classList.remove("active");
+    // complainSelector.classList.remove("active");
     dashboardSelector.classList.remove("active");
     messageSelector.classList.remove("active");
     settingsSelector.classList.remove("active");
@@ -52,20 +52,20 @@ profileSelector.addEventListener('click', function () {
     document.querySelector("complaint").style.display = 'none';
 });
 
-complainSelector.addEventListener('click', function () {
-    complainSelector.classList.add("active");
-    profileSelector.classList.remove("active");
-    dashboardSelector.classList.remove("active");
-    messageSelector.classList.remove("active");
-    settingsSelector.classList.remove("active");
-    document.querySelector("main").style.display = 'none';
-    document.querySelector("complaint").style.display = 'block';
-    document.querySelector("reg").style.display = 'none';
-});
+// complainSelector.addEventListener('click', function () {
+//     complainSelector.classList.add("active");
+//     profileSelector.classList.remove("active");
+//     dashboardSelector.classList.remove("active");
+//     messageSelector.classList.remove("active");
+//     settingsSelector.classList.remove("active");
+//     document.querySelector("main").style.display = 'none';
+//     document.querySelector("complaint").style.display = 'block';
+//     document.querySelector("reg").style.display = 'none';
+// });
 
 messageSelector.addEventListener('click', function () {
     messageSelector.classList.add("active");
-    complainSelector.classList.remove("active");
+    // complainSelector.classList.remove("active");
     profileSelector.classList.remove("active");
     dashboardSelector.classList.remove("active");
     settingsSelector.classList.remove("active");
@@ -74,7 +74,7 @@ messageSelector.addEventListener('click', function () {
 settingsSelector.addEventListener('click', function () {
     settingsSelector.classList.add("active");
     messageSelector.classList.remove("active");
-    complainSelector.classList.remove("active");
+    // complainSelector.classList.remove("active");
     profileSelector.classList.remove("active");
     dashboardSelector.classList.remove("active");
 
