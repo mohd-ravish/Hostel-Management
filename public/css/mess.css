@@ -126,14 +126,18 @@ body {
 }
 
 footer {
-    padding: 40px 300px 10px 300px;
     background-color: rgb(225, 224, 224);
+    padding-bottom: 15px;
 }
 
 .container {
-    padding-left: 300px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    row-gap: 10px;
+    display: flex;
+    justify-content: center;
     padding-bottom: 30px;
+    padding-top: 60px;
+}
+
+.container > div{
+    padding: 0 70px;
+
 }
