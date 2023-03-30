@@ -24,7 +24,7 @@
         <aside>
             <div class="top">
                 <div class="logo">
-                    <img src="/css/Images/logo.png">
+                    <img src="css/Images/logo.png">
                     <h2>JMI<span class="success"> HOSTEL</span></h2>
                 </div>
                 <div class="close" id="close-btn">
@@ -180,7 +180,7 @@
         <reg>
             <div class="registration">
                 <h1>Registration</h1>
-                <form action="#">
+                <form action="/registration" method="POST">
                     <div class="form first">
                         <div class="details personal">
                             <span class="title">Personal Details</span>
@@ -188,27 +188,28 @@
                             <div class="fields">
                                 <div class="input-field">
                                     <label>Full Name</label>
-                                    <input type="text" placeholder="Enter your name" required>
+                                    <input name="stud_name" type="text" placeholder="Enter your name" required>
                                 </div>
 
                                 <div class="input-field">
                                     <label>Date of Birth</label>
-                                    <input type="date" placeholder="Enter birth date" required>
+                                    <input name="dob" type="date" placeholder="Enter birth date" required>
                                 </div>
 
                                 <div class="input-field">
                                     <label>Father's Name</label>
-                                    <input type="text" placeholder="Enter your Father's Name" required>
+                                    <input name="father_name" type="text" placeholder="Enter your Father's Name"
+                                        required>
                                 </div>
 
                                 <div class="input-field">
                                     <label>Mobile Number</label>
-                                    <input type="number" placeholder="Enter mobile number" required>
+                                    <input name="mob_no" type="number" placeholder="Enter mobile number" required>
                                 </div>
 
                                 <div class="input-field">
                                     <label>Gender</label>
-                                    <select required>
+                                    <select required name="gen">
                                         <option disabled selected>Select gender</option>
                                         <option>Male</option>
                                         <option>Female</option>
@@ -218,7 +219,7 @@
 
                                 <div class="input-field">
                                     <label>Email</label>
-                                    <input type="text" placeholder="Enter your Email" required>
+                                    <input name="email" type="text" placeholder="Enter your Email" required>
                                 </div>
                             </div>
                         </div>
@@ -229,32 +230,32 @@
                             <div class="fields">
                                 <div class="input-field">
                                     <label>ID Type</label>
-                                    <input type="text" placeholder="Enter ID type" required>
+                                    <input name="id_type" type="text" placeholder="Enter ID type" required>
                                 </div>
 
                                 <div class="input-field">
                                     <label>ID Number</label>
-                                    <input type="number" placeholder="Enter ID number" required>
+                                    <input name="id_no" type="number" placeholder="Enter ID number" required>
                                 </div>
 
                                 <div class="input-field">
                                     <label>Faculty</label>
-                                    <input type="text" placeholder="Enter Faculty" required>
+                                    <input name="faculty" type="text" placeholder="Enter Faculty" required>
                                 </div>
 
                                 <div class="input-field">
                                     <label>Department</label>
-                                    <input type="text" placeholder="Enter Department" required>
+                                    <input name="dept" type="text" placeholder="Enter Department" required>
                                 </div>
 
                                 <div class="input-field">
                                     <label>Issued Date</label>
-                                    <input type="date" placeholder="Enter your issued date" required>
+                                    <input name="issuse" type="date" placeholder="Enter your issued date" required>
                                 </div>
 
                                 <div class="input-field">
                                     <label>Expiry Date</label>
-                                    <input type="date" placeholder="Enter expiry date" required>
+                                    <input name="expiry" type="date" placeholder="Enter expiry date" required>
                                 </div>
                             </div>
 
@@ -272,70 +273,65 @@
                             <div class="fields">
                                 <div class="input-field">
                                     <label>Address Type</label>
-                                    <input type="text" placeholder="Permanent or Temporary" required>
+                                    <input name="add_type" type="text" placeholder="Permanent or Temporary" required>
                                 </div>
 
                                 <div class="input-field">
                                     <label>Nationality</label>
-                                    <input type="text" placeholder="Enter nationality" required>
+                                    <input name="nationality" type="text" placeholder="Enter nationality" required>
                                 </div>
 
                                 <div class="input-field">
                                     <label>State</label>
-                                    <input type="text" placeholder="Enter your state" required>
+                                    <input name="state" type="text" placeholder="Enter your state" required>
                                 </div>
 
                                 <div class="input-field">
                                     <label>District</label>
-                                    <input type="text" placeholder="Enter your district" required>
+                                    <input name="district" type="text" placeholder="Enter your district" required>
                                 </div>
 
                                 <div class="input-field">
                                     <label>Block Number</label>
-                                    <input type="number" placeholder="Enter block number" required>
+                                    <input name="blockno" type="number" placeholder="Enter block number" required>
                                 </div>
 
                                 <div class="input-field">
                                     <label>Ward Number</label>
-                                    <input type="number" placeholder="Enter ward number" required>
+                                    <input name="ward" type="number" placeholder="Enter ward number" required>
                                 </div>
                             </div>
                         </div>
 
                         <div class="details family">
-                            <span class="title">Family Details</span>
+                            <!-- <span class="title">Family Details</span> -->
 
-                            <div class="fields">
+                            <!-- <div class="fields">
                                 <div class="input-field">
                                     <label>Father Name</label>
                                     <input type="text" placeholder="Enter father name" required>
                                 </div>
-
                                 <div class="input-field">
                                     <label>Mother Name</label>
                                     <input type="text" placeholder="Enter mother name" required>
                                 </div>
-
                                 <div class="input-field">
                                     <label>Grandfather</label>
                                     <input type="text" placeholder="Enter grandfther name" required>
                                 </div>
-
                                 <div class="input-field">
                                     <label>Spouse Name</label>
                                     <input type="text" placeholder="Enter spouse name" required>
                                 </div>
-
                                 <div class="input-field">
                                     <label>Father in Law</label>
                                     <input type="text" placeholder="Father in law name" required>
                                 </div>
-
                                 <div class="input-field">
                                     <label>Mother in Law</label>
                                     <input type="text" placeholder="Mother in law name" required>
                                 </div>
-                            </div>
+                            </div> -->
 
                             <div class="buttons">
                                 <div class="backBtn">
@@ -343,7 +339,7 @@
                                     <span class="btnText">Back</span>
                                 </div>
 
-                                <button class="sumbit">
+                                <button type="submit" class="sumbit">
                                     <span class="btnText">Submit</span>
                                     <i class="uil uil-navigator"></i>
                                 </button>
@@ -370,10 +366,12 @@
                         <small class="text-muted">Admin</small>
                     </div>
                     <div class="profile-photo">
-                        <img src="/css/Images/Faiyaz.jpg">
+ 
+                        <img src="css/Images/Faiyaz.jpg">
                     </div>
                 </div>
             </div>
+
 
 
             <div class="recent-updates">
@@ -381,7 +379,7 @@
                 <div class="updates">
                     <div class="update">
                         <div class="profile-photo">
-                            <img src="/css/Images/profile-2.jpg">
+                            <img src="css/Images/profile-2.jpg">
                         </div>
                         <div class="message">
                             <p><b>Mike Tyson</b> Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -392,7 +390,7 @@
                     </div>
                     <div class="update">
                         <div class="profile-photo">
-                            <img src="/css/Images/profile-3.jpg">
+                            <img src="css/Images/profile-3.jpg">
                         </div>
                         <div class="message">
                             <p><b>Mike Tyson</b> Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -403,7 +401,7 @@
                     </div>
                     <div class="update">
                         <div class="profile-photo">
-                            <img src="/css/Images/profile-4.jpg">
+                            <img src="css/Images/profile-4.jpg">
                         </div>
                         <div class="message">
                             <p><b>Mike Tyson</b> Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -466,7 +464,7 @@
             </div> -->
         </div>
     </div>
-    <script src="dashboard.js"></script>
+    <script src="JS/dashboard.js"></script>
 </body>
 
 </html>
