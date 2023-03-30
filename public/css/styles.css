@@ -18,6 +18,7 @@
      position: relative;
  }
 
+ /* navbar */
  nav {
      display: flex;
      padding: 2% 5%;
@@ -75,6 +76,7 @@
      display: none;
  }
 
+ /* text box */
  .text-box {
      width: 90%;
      color: #fff;
