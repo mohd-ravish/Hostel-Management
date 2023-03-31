@@ -26,6 +26,14 @@ router.get('/rules', (req, res) => {
     res.render("rules")
 });
 
+router.get('/chats', (req, res) => {
+    res.render("chats")
+});
+
+router.get('/input', (req, res) => {
+    res.render("input")
+});
+
 router.get('/dashboard', authController.studentlogin, (req, res) => {
     if (req.user) {
         res.render("dashboard");

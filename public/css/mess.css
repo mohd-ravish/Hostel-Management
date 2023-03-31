@@ -5,48 +5,6 @@ body {
     overflow-x: hidden;
 }
 
-/* navbar */
-
-.heading {
-    margin-left: 20px;
-    padding-top: 10px;
-    font-family: 'Alegreya Sans SC', sans-serif;
-    color: rgb(255, 255, 255);
-}
-
-.nav-bg {
-    position: sticky;
-    top: 0;
-}
-
-.navbar {
-    background-color: rgb(67, 67, 67);
-    width: 100%;
-}
-
-.navTxt {
-    margin-right: 50px;
-    font-size: 18px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: aliceblue;
-}
-
-.navTxt:hover {
-    color: rgb(211, 211, 211);
-}
-
-.loginButton {
-    font-size: 18px;
-    margin-right: 70px;
-    background-color: aliceblue;
-    border-radius: 10px;
-    color: black;
-}
-
-.loginButton:hover {
-    background-color: rgb(203, 203, 203);
-}
-
 /* buttons */
 .buttons {
     width: 100%;

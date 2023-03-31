@@ -1,0 +1,52 @@
+<!-- navbar -->
+<div class="nav-bg">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a href="/"><img class="logo" src="css/Images/logo2.png"></a>
+            <h3 class="heading">JMI HOSTEL</h3>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class=" nav-item">
+                        <a class="navTxt nav-link" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class=" nav-item">
+                        <a class="navTxt nav-link" aria-current="page" href="input">Input</a>
+                    </li>
+                    <li class=" nav-item">
+                        <!-- <input type="hidden" name="topic" value="something" /> -->
+                        <form action="chat" method="POST">
+                            <button type="submit" class="special-btn navTxt nav-link" href="chats">chats</button>
+                        </form>
+                    </li>
+                    <li class=" nav-item">
+                        <a class="navTxt nav-link" aria-current="page" href="mess">Mess</a>
+                    </li>
+                    <li class=" nav-item">
+                        <a class="navTxt nav-link" aria-current="page" href="fee">Fee Structure</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navTxt nav-link" href="rules">Rules & Regulations</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle loginButton" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Login
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="login">Admin</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="student">Student</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>

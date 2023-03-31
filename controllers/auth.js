@@ -138,3 +138,40 @@ exports.registration = async function(req,res){
         })
     })
 }
+
+exports.input = async function (req, res) {
+    var chat = req.body.chat;
+    connection.query("insert into chat(chat_message) values( ? )", [chat], async function (error, results, fields) {
+        if (error) {
+            console.log(error);
+
+        } else {
+            return res.redirect("/input");
+        }
+    })
+    connection.query('SELECT * from chat', async (err, chat_message) => {
+        if (err) {
+            console.log(err);
+        } else {
+            if (chat_message.length > 0) {
+                console.log(chat_message);
+                return res.render("chats", {
+                    data: chat_message
+                });
+            }
+        }
+    })
+}
+
+exports.chat = async function (req, res) {
+    connection.query('SELECT * from chat', async (err, result) => {
+        if (err) {
+            console.log(err);
+        } else {
+            if (result.length > 0) {
+                console.log(result);
+                return res.render("chats", { data: result });
+            }
+        }
+    })
+}
