@@ -22,75 +22,43 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap" rel="stylesheet">
 
+
+    <!-- icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
     <!-- css -->
     <link rel="stylesheet" href="css/styles.css">
-
-    <!-- Title -->
-    <title>JMI Hostel</title>
+    <title>Hostel</title>
 </head>
 
 <body>
     <!-- navbar -->
-    <div class="nav-bg">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-                <img class="navbar-brand logo" src="css/Images/logo.png" alt="">
-                <h3 class="heading">JMI HOSTEL</h3>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto">
-                        <li class=" nav-item">
-                            <a class="navTxt nav-link" aria-current="page" href="/">Home</a>
-                        </li>
-
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle navTxt " href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                About
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="mess">Mess</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="fee">Fee Structure</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="rules">Rules & regulations</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="navTxt nav-link" href="#contact">Contact</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle navTxt loginButton" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Login
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="login">Admin</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="student">Student</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+    <section class="header">
+        <nav>
+            <a href="/"><img src="css/Images/logo2.png"></a>
+            <h2 class="heading">JMI HOSTEL</h2>
+            <div class="nav-links" id="navLinks">
+                <span class="icon material-symbols-outlined" onClick="hideMenu()">close</span>
+                <ul>
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="mess">ABOUT</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                    <li><a href="student">LOGIN</a></li>
+                </ul>
             </div>
+            <span class="icon material-symbols-outlined" onClick="showMenu()">menu</span>
         </nav>
-    </div>
 
-    <!-- Hostel Image -->
-    <div>
-        <img src="css/Images/main-img.jpg" class="img-fluid background" alt="">
-    </div>
+        <div class="text-box">
+            <h1>Jamia Millia Islamia</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Id cumque mollitia veniam ipsa at sunt
+                reiciendis</p>
+            <a href="#" class="hero-btn">Visit Us to know more</a>
+        </div>
+    </section>
 
     <!-- About -->
     <div id="about">
@@ -204,3 +172,16 @@
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
 </body>
+
+<script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu() {
+        navLinks.style.right = "0";
+    }
+    function hideMenu() {
+        navLinks.style.right = "-200px";
+    }
+</script>
+</body>
+
+</html>
