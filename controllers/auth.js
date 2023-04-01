@@ -1,12 +1,7 @@
 const mysql = require("mysql");
 const bcrypt = require("bcryptjs");
 const { promisify } = require("util");
-// const express = require("express");
-// const app = express();
-// // const dotenv = require("dotenv").config();
-// // const cookieParser = require("cookie-parser");
 
-// app.use(express.static('public'));
 const connection = mysql.createConnection({
     host: process.env.HOST,
     user: process.env.DATABASE_USER,
@@ -94,7 +89,6 @@ exports.studentlogin = async function (req, res) {
                         });
                     }
                 });
-                // return res.status(200).redirect=("/dashboard");
             }
         })
     } catch (err) {
