@@ -34,6 +34,7 @@ connection.connect((err) => {
         console.log("MYSQL CONNECTED")
     }
 })
+
 // Define Routes
 app.use('/', require('./routes/pages'));
 app.use('/', require('./routes/auth'));

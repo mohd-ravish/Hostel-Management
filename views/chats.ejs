@@ -3,6 +3,7 @@
     <!-- icon  -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+
     <title>Fee Structure</title>
     <style>
         body {
@@ -22,6 +23,10 @@
         .icon {
             padding-right: 10px;
         }
+
+        .text {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
     </style>
     </head>
 
@@ -35,7 +40,7 @@
                                     class="material-symbols-outlined icon">account_circle</span>Anonymous</div>
                             <div class="card-body">
                                 <blockquote class="blockquote mb-0">
-                                    <p>
+                                    <p class="text">
                                         <%= post.chat_message %>
                                     </p>
                                 </blockquote>
