@@ -14,13 +14,14 @@
                     <li class=" nav-item">
                         <a class="navTxt nav-link" aria-current="page" href="/">Home</a>
                     </li>
-                    <li class=" nav-item">
+                    <!-- <li class=" nav-item">
                         <a class="navTxt nav-link" aria-current="page" href="input">Input</a>
-                    </li>
+                    </li> -->
                     <li class=" nav-item">
                         <!-- <input type="hidden" name="topic" value="something" /> -->
-                        <form action="chat" method="POST">
-                            <button type="submit" class="special-btn navTxt nav-link" href="chats">chats</button>
+                        <form id="form-id" action="chat" method="POST">
+                            <a class="navTxt nav-link" aria-current="page" href="#"
+                                onclick="document.getElementById('form-id').submit()">Chats</a>
                         </form>
                     </li>
                     <li class=" nav-item">

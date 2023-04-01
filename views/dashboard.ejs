@@ -8,9 +8,23 @@
     <title>DashBoard</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;900&family=Poppins:wght@300;400;500;600;700;800&family=Ubuntu&display=swap"
+        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@500&display=swap" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&family=Poppins:wght@300;400&display=swap"
         rel="stylesheet">
     <!-- bootstrap  -->
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -40,35 +54,31 @@
                     <span class="material-icons-sharp">person_outline</span>
                     <h3>Profile</h3>
                 </a>
-                <!-- <a href="#">
-                    <span class="material-icons-sharp">receipt_long</span>
-                    <h3>Orders</h3>
+
+                <a id="complain" href="#">
+                    <span class="material-symbols-outlined">
+                        sms_failed
+                    </span>
+                    <h3>Complain</h3>
                 </a>
-                <a href="#">
-                    <span class="material-icons-sharp">insights</span>
-                    <h3>Analytics</h3>
-                </a> -->
-                <a id="message" href="#">
+                <a id="payment" href="#">
+                    <span class="material-symbols-outlined">
+                        payments
+                    </span>
+                    <h3>Payment</h3>
+                </a>
+                <a id="chat" href="#">
                     <span class="material-icons-sharp">mail_outline</span>
-                    <h3>Messages</h3>
-                    <span class="message-count">New</span>
+                    <h3>Chats</h3>
+                    <!-- <span class="message-count">New</span> -->
                 </a>
-                <!-- <a href="#">
-                    <span class="material-icons-sharp">inventory</span>
-                    <h3>Products</h3>
-                </a>
-                <a href="#">
-                    <span class="material-icons-sharp">report_gmailerrorred</span>
-                    <h3>Reports</h3>
-                </a> -->
+
                 <a id="settings" href="#">
                     <span class="material-icons-sharp">settings</span>
                     <h3>Settings</h3>
                 </a>
-                <!-- <a href="#">
-                    <span class="material-icons-sharp">add</span>
-                    <h3>Add Product</h3> -->
-                </a>
+
+
                 <a class="logout" href="#">
                     <span class="material-icons-sharp">logout</span>
                     <h3>Logout</h3>
@@ -92,7 +102,7 @@
                         <div class="left">
                             <p><br></p>
                             <h1>My Jamia</h1>
-                            <h3>Account</h3>
+                            <h3>Main</h3>
                         </div>
                         <div class="progress">
                             <svg>
@@ -100,7 +110,8 @@
                                 <!-- <button class="btn btn-lg  btn-outline">Go</button> -->
                             </svg>
                             <div class="number">
-                                <button type="button" onclick="location.href='https://www.jmi.ac.in/'">Go</button>
+                                <button type="button" class="go"
+                                    onclick="location.href='https://www.jmi.ac.in/'">Go</button>
                             </div>
                         </div>
 
@@ -114,15 +125,16 @@
                     <div class="middle">
                         <div class="left">
                             <p><br></p>
-                            <h1>My Jamia</h1>
-                            <h3>Account</h3>
+                            <h1>JMI COE</h1>
+                            <h3>Examination</h3>
                         </div>
                         <div class="progress">
                             <svg>
                                 <circle cx='38' cy='38' r='36'></circle>
                             </svg>
                             <div class="number">
-                                <button type="button" onclick="location.href='https://www.jmi.ac.in/'">Go</button>
+                                <button type="button" class="go"
+                                    onclick="location.href='https://www.jmi.ac.in/'">Go</button>
                             </div>
                         </div>
                     </div>
@@ -135,7 +147,7 @@
                     <div class="middle">
                         <div class="left">
                             <p><br></p>
-                            <h1>My Jamia</h1>
+                            <h1>Student Acccount</h1>
                             <h3>Account</h3>
                         </div>
                         <div class="progress">
@@ -143,7 +155,8 @@
                                 <circle cx='38' cy='38' r='36'></circle>
                             </svg>
                             <div class="number">
-                                <button type="button" onclick="location.href='https://www.jmi.ac.in/'">Go</button>
+                                <button type="button" class="go"
+                                    onclick="location.href='https://www.jmi.ac.in/'">Go</button>
                             </div>
                         </div>
                     </div>
@@ -179,176 +192,489 @@
 
         <reg>
             <div class="registration">
-                <h1>Registration</h1>
-                <form action="/registration" method="POST">
-                    <div class="form first">
-                        <div class="details personal">
-                            <span class="title">Personal Details</span>
+                <%if(data1.length> 0) {%>
+                    <h1>Profile</h1>
+                    <form action="/registration" method="POST">
+                        <div class="form first">
+                            <div class="details personal">
+                                <span class="title">Personal Details</span>
 
-                            <div class="fields">
-                                <div class="input-field">
-                                    <label>Full Name</label>
-                                    <input name="stud_name" type="text" placeholder="Enter your name" required>
-                                </div>
+                                <div class="fields">
+                                    <div class="output-field">
+                                        <label>Full Name</label>
+                                        <p>
+                                            <%= data1[0].student_name %>
+                                        </p>
+                                        <!-- <input name="stud_name" type="text" placeholder="Enter your name" required> -->
+                                    </div>
 
-                                <div class="input-field">
-                                    <label>Date of Birth</label>
-                                    <input name="dob" type="date" placeholder="Enter birth date" required>
-                                </div>
+                                    <div class="output-field">
+                                        <label>Date of Birth</label>
+                                        <p>
+                                            <%= data1[0].dob %>
+                                        </p>
+                                        <!-- <input name="dob" type="date" placeholder="Enter birth date" required> -->
+                                    </div>
 
-                                <div class="input-field">
-                                    <label>Father's Name</label>
-                                    <input name="father_name" type="text" placeholder="Enter your Father's Name"
-                                        required>
-                                </div>
+                                    <div class="output-field">
+                                        <label>Father's Name</label>
+                                        <p>
+                                            <%= data1[0].fathername %>
+                                        </p>
+                                        <!-- <input name="father_name" type="text" placeholder="Enter your Father's Name" required> -->
+                                    </div>
 
-                                <div class="input-field">
-                                    <label>Mobile Number</label>
-                                    <input name="mob_no" type="number" placeholder="Enter mobile number" required>
-                                </div>
+                                    <div class="output-field">
+                                        <label>Mobile Number</label>
+                                        <p>
+                                            <%= data1[0].mobileno %>
+                                        </p>
+                                        <!-- <input name="mob_no" type="number" placeholder="Enter mobile number" required> -->
+                                    </div>
 
-                                <div class="input-field">
-                                    <label>Gender</label>
-                                    <select required name="gen">
-                                        <option disabled selected>Select gender</option>
-                                        <option>Male</option>
-                                        <option>Female</option>
-                                        <option>Others</option>
-                                    </select>
-                                </div>
+                                    <div class="output-field">
+                                        <label>Gender</label>
+                                        <p>
+                                            <%= data1[0].gender %>
+                                        </p>
+                                    </div>
 
-                                <div class="input-field">
-                                    <label>Email</label>
-                                    <input name="email" type="text" placeholder="Enter your Email" required>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="details ID">
-                            <span class="title">Identity Details</span>
-
-                            <div class="fields">
-                                <div class="input-field">
-                                    <label>ID Type</label>
-                                    <input name="id_type" type="text" placeholder="Enter ID type" required>
-                                </div>
-
-                                <div class="input-field">
-                                    <label>ID Number</label>
-                                    <input name="id_no" type="number" placeholder="Enter ID number" required>
-                                </div>
-
-                                <div class="input-field">
-                                    <label>Faculty</label>
-                                    <input name="faculty" type="text" placeholder="Enter Faculty" required>
-                                </div>
-
-                                <div class="input-field">
-                                    <label>Department</label>
-                                    <input name="dept" type="text" placeholder="Enter Department" required>
-                                </div>
-
-                                <div class="input-field">
-                                    <label>Issued Date</label>
-                                    <input name="issuse" type="date" placeholder="Enter your issued date" required>
-                                </div>
-
-                                <div class="input-field">
-                                    <label>Expiry Date</label>
-                                    <input name="expiry" type="date" placeholder="Enter expiry date" required>
+                                    <div class="output-field">
+                                        <label>Email</label>
+                                        <p>
+                                            <%= data1[0].email %>
+                                        </p>
+                                        <!-- <input name="email" type="text" placeholder="Enter your Email" required> -->
+                                    </div>
                                 </div>
                             </div>
 
-                            <button class="nextBtn">
-                                <span class="btnText">Next</span>
-                                <i class="uil uil-navigator"></i>
-                            </button>
-                        </div>
-                    </div>
+                            <div class="details ID">
+                                <span class="title">Identity Details</span>
 
-                    <div class="form second">
-                        <div class="details address">
-                            <span class="title">Address Details</span>
+                                <div class="fields">
+                                    <div class="output-field">
+                                        <label>ID Card</label>
+                                        <p>
+                                            Uploaded
+                                        </p>
+                                        <!-- <input name="id_type" type="text" placeholder="Enter ID type" required> -->
+                                    </div>
 
-                            <div class="fields">
-                                <div class="input-field">
-                                    <label>Address Type</label>
-                                    <input name="add_type" type="text" placeholder="Permanent or Temporary" required>
-                                </div>
+                                    <div class="output-field">
+                                        <label>ID Number</label>
+                                        <p>
+                                            <%= data1[0].id_no %>
+                                        </p>
+                                        <!-- <input name="id_no" type="number" placeholder="Enter ID number" required> -->
+                                    </div>
 
-                                <div class="input-field">
-                                    <label>Nationality</label>
-                                    <input name="nationality" type="text" placeholder="Enter nationality" required>
-                                </div>
+                                    <div class="output-field">
+                                        <label>Faculty</label>
+                                        <p>
+                                            <%= data1[0].faculty %>
+                                        </p>
+                                        <!-- <output name="faculty" type="text" placeholder="Enter Faculty" required> -->
+                                    </div>
 
-                                <div class="input-field">
-                                    <label>State</label>
-                                    <input name="state" type="text" placeholder="Enter your state" required>
-                                </div>
+                                    <div class="output-field">
+                                        <label>Department</label>
+                                        <p>
+                                            <%= data1[0].dept %>
+                                        </p>
+                                        <!-- <output name="dept" type="text" placeholder="Enter Department" required> -->
+                                    </div>
 
-                                <div class="input-field">
-                                    <label>District</label>
-                                    <input name="district" type="text" placeholder="Enter your district" required>
-                                </div>
+                                    <div class="output-field">
+                                        <label>Issued Date</label>
+                                        <p>
+                                            <%= data1[0].issue %>
+                                        </p>
+                                        <!-- <output name="issuse" type="date" placeholder="Enter your issued date" required> -->
+                                    </div>
 
-                                <div class="input-field">
-                                    <label>Block Number</label>
-                                    <input name="blockno" type="number" placeholder="Enter block number" required>
+                                    <div class="output-field">
+                                        <label>Expiry Date</label>
+                                        <p>
+                                            <%= data1[0].expiry %>
+                                        </p>
+                                        <!-- <output name="expiry" type="date" placeholder="Enter expiry date" required> -->
+                                    </div>
                                 </div>
+                                <div class="details address">
+                                    <span class="title">Address Details</span>
 
-                                <div class="input-field">
-                                    <label>Ward Number</label>
-                                    <input name="ward" type="number" placeholder="Enter ward number" required>
-                                </div>
-                            </div>
-                        </div>
+                                    <div class="fields">
+                                        <div class="output-field">
+                                            <label>Address Type</label>
+                                            <p>
+                                                <%= data1[0].address_type %>
+                                            </p>
+                                            <!-- <output name="add_type" type="text" placeholder="Permanent or Temporary" required> -->
+                                        </div>
 
-                        <div class="details family">
-                            <!-- <span class="title">Family Details</span> -->
+                                        <div class="output-field">
+                                            <label>Nationality</label>
+                                            <p>
+                                                <%= data1[0].nationality %>
+                                            </p>
+                                            <!-- <output name="nationality" type="text" placeholder="Enter nationality" required> -->
+                                        </div>
 
-                            <!-- <div class="fields">
-                                <div class="input-field">
-                                    <label>Father Name</label>
-                                    <input type="text" placeholder="Enter father name" required>
-                                </div>
-                                <div class="input-field">
-                                    <label>Mother Name</label>
-                                    <input type="text" placeholder="Enter mother name" required>
-                                </div>
-                                <div class="input-field">
-                                    <label>Grandfather</label>
-                                    <input type="text" placeholder="Enter grandfther name" required>
-                                </div>
-                                <div class="input-field">
-                                    <label>Spouse Name</label>
-                                    <input type="text" placeholder="Enter spouse name" required>
-                                </div>
-                                <div class="input-field">
-                                    <label>Father in Law</label>
-                                    <input type="text" placeholder="Father in law name" required>
-                                </div>
-                                <div class="input-field">
-                                    <label>Mother in Law</label>
-                                    <input type="text" placeholder="Mother in law name" required>
-                                </div>
-                            </div> -->
+                                        <div class="output-field">
+                                            <label>State</label>
+                                            <p>
+                                                <%= data1[0].state %>
+                                            </p>
+                                            <!-- <output name="state" type="text" placeholder="Enter your state" required> -->
+                                        </div>
 
-                            <div class="buttons">
-                                <div class="backBtn">
+                                        <div class="output-field">
+                                            <label>District</label>
+                                            <p>
+                                                <%= data1[0].district %>
+                                            </p>
+                                            <!-- <output name="district" type="text" placeholder="Enter your district" required> -->
+                                        </div>
+
+                                        <div class="output-field">
+                                            <label>Block Number</label>
+                                            <p>
+                                                <%= data1[0].blk_no %>
+                                            </p>
+                                            <!-- <output name="blockno" type="number" placeholder="Enter block number" required> -->
+                                        </div>
+
+                                        <div class="output-field">
+                                            <label>Ward Number</label>
+                                            <p>
+                                                <%= data1[0].ward_no %>
+                                            </p>
+                                            <!-- <input name="ward" type="number" placeholder="Enter ward number" required> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <button class="nextBtn p_nextBtn">
+                                    <span class="btnText">Next</span>
                                     <i class="uil uil-navigator"></i>
-                                    <span class="btnText">Back</span>
-                                </div>
-
-                                <button type="submit" class="sumbit">
-                                    <span class="btnText">Submit</span>
-                                    <i class="uil uil-navigator"></i>
-                                </button>
+                                </button> -->
                             </div>
                         </div>
-                    </div>
-                </form>
+                        <div class="form second">
+                            <div class="details family">
+                                <div class="buttons">
+                                    <div class="backBtn p_backBtn">
+                                        <i class="uil uil-navigator"></i>
+                                        <span class="btnText">Back</span>
+                                    </div>
+
+                                    <button type="submit" class="sumbit">
+                                        <span class="btnText">Submit</span>
+                                        <i class="uil uil-navigator"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+
+
+                    <% } else { %>
+                        <h1>Registration</h1>
+                        <form action="/registration" method="POST">
+                            <div class="form first">
+                                <div class="details personal">
+                                    <span class="title">Personal Details</span>
+
+                                    <div class="fields">
+                                        <div class="input-field">
+                                            <label>Full Name</label>
+                                            <input name="stud_name" type="text" placeholder="Enter your name" required>
+                                        </div>
+
+                                        <div class="input-field">
+                                            <label>Date of Birth</label>
+                                            <input name="dob" type="date" placeholder="Enter birth date" required>
+                                        </div>
+
+                                        <div class="input-field">
+                                            <label>Father's Name</label>
+                                            <input name="father_name" type="text" placeholder="Enter your Father's Name"
+                                                required>
+                                        </div>
+
+                                        <div class="input-field">
+                                            <label>Mobile Number</label>
+                                            <input name="mob_no" type="number" placeholder="Enter mobile number"
+                                                required>
+                                        </div>
+
+                                        <div class="input-field">
+                                            <label>Gender</label>
+                                            <select required name="gen">
+                                                <option disabled selected>Select gender</option>
+                                                <option>Male</option>
+                                                <option>Female</option>
+                                                <option>Others</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="input-field">
+                                            <label>Email</label>
+                                            <input name="email" type="text" placeholder="Enter your Email" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="details ID">
+                                    <span class="title">Identity Details</span>
+
+                                    <div class="fields">
+                                        <!-- <div class="input-field">
+                                            <label>ID Card</label>
+                                            <input name="id_type" type="text" placeholder="Enter ID type" required>
+                                        </div> -->
+
+                                        <div class="input-field">
+                                            <label>ID Card</label>
+                                            <input name="id_type" type="file" placeholder="Upload" required>
+                                        </div>
+
+                                        <div class="input-field">
+                                            <label>ID Number</label>
+                                            <input name="id_no" type="text" placeholder="Enter ID number" required>
+                                        </div>
+
+                                        <div class="input-field">
+                                            <label>Faculty</label>
+                                            <input name="faculty" type="text" placeholder="Enter Faculty" required>
+                                        </div>
+
+                                        <div class="input-field">
+                                            <label>Department</label>
+                                            <input name="dept" type="text" placeholder="Enter Department" required>
+                                        </div>
+
+                                        <div class="input-field">
+                                            <label>Issued Date</label>
+                                            <input name="issuse" type="date" placeholder="Enter your issued date"
+                                                required>
+                                        </div>
+
+                                        <div class="input-field">
+                                            <label>Expiry Date</label>
+                                            <input name="expiry" type="date" placeholder="Enter expiry date" required>
+                                        </div>
+
+
+                                    </div>
+
+                                    <button class="nextBtn">
+                                        <span class="btnText">Next</span>
+                                        <i class="uil uil-navigator"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="form second">
+                                <div class="details address">
+                                    <span class="title">Address Details</span>
+
+                                    <div class="fields">
+                                        <div class="input-field">
+                                            <label>Address Type</label>
+                                            <input name="add_type" type="text" placeholder="Permanent or Temporary"
+                                                required>
+                                        </div>
+
+                                        <div class="input-field">
+                                            <label>Nationality</label>
+                                            <input name="nationality" type="text" placeholder="Enter nationality"
+                                                required>
+                                        </div>
+
+                                        <div class="input-field">
+                                            <label>State</label>
+                                            <input name="state" type="text" placeholder="Enter your state" required>
+                                        </div>
+
+                                        <div class="input-field">
+                                            <label>District</label>
+                                            <input name="district" type="text" placeholder="Enter your district"
+                                                required>
+                                        </div>
+
+                                        <div class="input-field">
+                                            <label>Block Number</label>
+                                            <input name="blockno" type="number" placeholder="Enter block number"
+                                                required>
+                                        </div>
+
+                                        <div class="input-field">
+                                            <label>Ward Number</label>
+                                            <input name="ward" type="number" placeholder="Enter ward number" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="details family">
+                                    <div class="buttons">
+                                        <div class="backBtn">
+                                            <i class="uil uil-navigator"></i>
+                                            <span class="btnText">Back</span>
+                                        </div>
+
+                                        <button type="submit" class="sumbit">
+                                            <span class="btnText">Submit</span>
+                                            <i class="uil uil-navigator"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <% } %>
             </div>
         </reg>
+
+        <complain>
+            <div class="Complaint">
+                <div class="contain">
+                    <h1 class="title">Complaint Form</h1>
+                    <form action="#" method="POST">
+
+                        <div class="inputBox">
+                            <label>First Name</label>
+                            <input type="text" id="firstname" name="firstname" placeholder="Enter first name">
+                        </div>
+
+                        <div class="inputBox">
+                            <label>Last Name</label>
+                            <input type="text" id="lastname" name="lastname" placeholder="Enter last name">
+                        </div>
+
+                        <div class="inputBox">
+                            <label>Email</label>
+                            <input type="email" id="email" name="email" placeholder="Enter email" required>
+                        </div>
+
+                        <div class="inputBox">
+                            <label>Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Subject of complaint" required>
+                        </div>
+
+                        <div class="inputBox">
+                            <label>Complaint</label>
+                            <textarea rows="8" id="complaint" name="complaint" placeholder="Enter your complaint ..."
+                                required></textarea>
+                        </div>
+
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </complain>
+
+        <payment>
+            <div class="containe">
+
+                <form action="#">
+
+                    <div class="row">
+
+                        <div class="col">
+
+                            <h3 class="title">Billing Address</h3>
+
+                            <div class="inputBox">
+                                <label>full name</label>
+                                <input type="text" placeholder="Enter your name">
+                            </div>
+                            <div class="inputBox">
+                                <label>email</label>
+                                <input type="email" placeholder="example@example.com">
+                            </div>
+                            <div class="inputBox">
+                                <label>address</label>
+                                <input type="text" placeholder="room - street - locality">
+                            </div>
+                            <div class="inputBox">
+                                <label>city</label>
+                                <input type="text" placeholder="New Delhi">
+                            </div>
+
+                            <div class="flex">
+                                <div class="inputBox">
+                                    <label>state</label>
+                                    <input type="text" placeholder="Delhi">
+                                </div>
+                                <div class="inputBox">
+                                    <label>zip code</label>
+                                    <input type="text" placeholder="123 456">
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col">
+
+                            <h3 class="title">Payment</h3>
+
+                            <div class="inputBox">
+                                <label>cards accepted</label>
+                                <img src="css/Images/card_img.png" alt="">
+                            </div>
+                            <div class="inputBox">
+                                <label>name on card</label>
+                                <input type="text" placeholder="Name on card">
+                            </div>
+                            <div class="inputBox">
+                                <label>credit card number</label>
+                                <input type="number" placeholder="1111-2222-3333-4444">
+                            </div>
+                            <div class="inputBox">
+                                <label>exp month</label>
+                                <input type="text" placeholder="January">
+                            </div>
+
+                            <div class="flex">
+                                <div class="inputBox">
+                                    <label>exp year</label>
+                                    <input type="number" placeholder="2022">
+                                </div>
+                                <div class="inputBox">
+                                    <label>CVV</label>
+                                    <input type="text" placeholder="123">
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <input type="submit" value="proceed to checkout" class="submit-btn">
+
+                </form>
+
+            </div>
+
+        </payment>
+
+        <chat>
+            <form action="/input" method="POST">
+                <div>
+                    <div class="container">
+                        <h3 class="title">Enter a message anonymously</h3>
+                        <form action="#" method="POST">
+                            <div class="input-box">
+                                <input type="text" class="message-chat" name="chat" placeholder="Enter a message..."
+                                    autocomplete="off">
+                            </div>
+                            <button class="submit-button" type="submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </form>
+        </chat>
 
 
         <div class="right">
@@ -362,12 +688,17 @@
                 </div>
                 <div class="profile">
                     <div class="info">
-                        <p>Hey, <b>Dr.Faiyaz</b></p>
-                        <small class="text-muted">Admin</small>
+                        <% if (data1.length> 0) { %>
+                            <p>Hey, <b>
+                                    <%= data1[0].student_name %>
+                                </b></p>
+                            <% }else{ %>
+                                <p>Hey, <b>unknown</b></p>
+                                <% } %>
+                                    <small class="text-muted"> Student</small>
                     </div>
-                    <div class="profile-photo">
- 
-                        <img src="css/Images/Faiyaz.jpg">
+                    <div class="admin-photo">
+                        <img src="css/Images/profile_right.png">
                     </div>
                 </div>
             </div>
@@ -379,92 +710,76 @@
                 <div class="updates">
                     <div class="update">
                         <div class="profile-photo">
-                            <img src="css/Images/profile-2.jpg">
+                            <!-- <img src="css/Images/profile-2.jpg">
+                             -->
+                            <span class="material-symbols-outlined">
+                                feed
+                            </span>
                         </div>
                         <div class="message">
-                            <p><b>Mike Tyson</b> Lorem Ipsum is simply dummy text of the printing and typesetting
-                                industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,.
+                            <p>
+                                <a href="http://jmicoe.in/pdf23/DIPLOMA NOTICE.pdf" target="_blank">Notice for online
+                                    Examination forms for Diploma in
+                                    Engineering(Self-finance)</a>
                             </p>
-                            <small class="text-muted">2 Minutes Ago</small>
+
+                            <small class="text-muted">Now</small>
                         </div>
                     </div>
                     <div class="update">
                         <div class="profile-photo">
-                            <img src="css/Images/profile-3.jpg">
+                            <!-- <img src="css/Images/profile-3.jpg">
+                             -->
+                            <span class="material-symbols-outlined">
+                                feed
+                            </span>
                         </div>
                         <div class="message">
-                            <p><b>Mike Tyson</b> Lorem Ipsum is simply dummy text of the printing and typesetting
-                                industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                            <p>
+                                <a href="http://jmicoe.in/pdf23/FACULTY OF NATURAL SCIENCE COMPARTMENT REVISED  DATE SHEET.pdf"
+                                    target="_blank">FACULTY
+                                    OF NATURAL SCIENCE COMPARTMENT REVISED DATE SHEET</a>
                             </p>
-                            <small class="text-muted">2 Minutes Ago</small>
+                            <small class="text-muted">Now</small>
                         </div>
                     </div>
                     <div class="update">
                         <div class="profile-photo">
-                            <img src="css/Images/profile-4.jpg">
+                            <!-- <img src="css/Images/profile-4.jpg"> -->
+                            <span class="material-symbols-outlined">
+                                feed
+                            </span>
                         </div>
                         <div class="message">
-                            <p><b>Mike Tyson</b> Lorem Ipsum is simply dummy text of the printing and typesetting
-                                industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                            <p>
+                                <a href="http://jmicoe.in/pdf23/REMAINING DATESHEET OF COMPARTMENT U.G. (SEMESTER-V AND SEMESTER-VI) OFFLINE MODE (SESSION-2021-22).pdf"
+                                    target="_blank">Remaining Datesheet for compartment examination-2022(Faculty of
+                                    Humanities &amp; Language and
+                                    Faculty of Social Sciences)</a>
                             </p>
-                            <small class="text-muted">2 Minutes Ago</small>
+                            <small class="text-muted">Now</small>
                         </div>
                     </div>
                 </div>
             </div>
-
-
-            <!-- <div class="sales-analytics">
-                <h2>Sales Analytics</h2>
-                <div class="item online">
-                    <div class="icon">
-                        <span class="material-icons-sharp">shopping_cart</span>
-                    </div>
-                    <div class="right">
-                        <div class="info">
-                            <h3>ONLINE ORDERS</h3>
-                            <small class="text-muted">Last 24 Hours </small>
-                        </div>
-                        <h5 class="warning">+39%</h5>
-                        <h3>3849</h3>
-                    </div>
-                </div>
-                <div class="item offline">
-                    <div class="icon">
-                        <span class="material-icons-sharp">local_mall</span>
-                    </div>
-                    <div class="right">
-                        <div class="info">
-                            <h3>OFFLINE ORDERS</h3>
-                            <small class="text-muted">Last 24 Hours </small>
-                        </div>
-                        <h5 class="danger">+39%</h5>
-                        <h3>3849</h3>
-                    </div>
-                </div>
-                <div class="item customers">
-                    <div class="icon">
-                        <span class="material-icons-sharp">person</span>
-                    </div>
-                    <div class="right">
-                        <div class="info">
-                            <h3>NEW PERSONS </h3>
-                            <small class="text-muted">Last 24 Hours </small>    
-                        </div>
-                        <h5 class="warning">+39%</h5>
-                        <h3>3849</h3>
-                    </div>
-                </div>
-                <div class="item add-product">
-                    <div>
-                        <span class="material-icons-sharp">add</span>
-                        <h3>Add Product</h3>
-                    </div>
-                </div>
-            </div> -->
         </div>
     </div>
+    <!-- <script>
+        const form = document.querySelector("form"),
+            p_nextBtn = form.querySelector(".nextBtn"),
+            p_backBtn = form.querySelector(".backBtn");
+        // allInput = form.querySelectorAll(".first p");
+
+
+        p_nextBtn.addEventListener("click", () => {
+            // allInput.forEach(p => {
+            form.classList.add('secActive');
+        });
+
+        backBtn.addEventListener("click", () => form.classList.remove('secActive'))
+    </script> -->
     <script src="JS/dashboard.js"></script>
+
 </body>
 
 </html>

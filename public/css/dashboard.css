@@ -1,17 +1,17 @@
 /*------------------ ROOT VARAIBLES -----------------*/
 :root {
-  --color-primary: #7380ec;
+  --color-primary: #19ac6f;
   --color-danger: #ff7782;
   --color-success: #05865b;
   --color-warning: #ffbb55;
-  --color-white: #fff;
+  --color-white: #ffffffd6;
   --color-info-dark: #7d8da1;
   --color-info-light: #dceleb;
   --color-dark: #363949;
   --color-light: rgba(132, 139, 200, 0.18);
-  --color-primary-variant: #111e88;
+  --color-primary-variant: #3cafd1;
   --color-dark-variant: #677483;
-  --color-background: #f6f6f9;
+  --color-background: #e9f5f0;
   --color-newgreen: rgba(13, 92, 26, 0.895);
   --card-border-radius: 2rem;
   --border-radius-1: 0.4rem;
@@ -99,10 +99,17 @@ small {
   font-size: 0.75rem;
 }
 
-.profile-photo {
+.admin-photo {
   width: 2.8rem;
   height: 2.8rem;
   border-radius: 50%;
+  overflow: hidden;
+}
+
+.profile-photo {
+  width: 2.8rem;
+  height: 2.8rem;
+  /* border-radius: 50%; */
   overflow: hidden;
 }
 
@@ -120,6 +127,10 @@ b {
 
 button {
   color: var(--color-dark);
+}
+
+.go:hover {
+  cursor: pointer;
 }
 
 .primary {
@@ -276,7 +287,7 @@ main .insights>div:hover {
 }
 
 main .insights>div span {
-  background: var(--color-primary);
+  background: var(--color-primary-variant);
   padding: 0.5rem;
   border-radius: 50%;
   color: var(--color-white);
@@ -747,7 +758,7 @@ reg {
   width: 100%;
   border-radius: 6px;
   padding: 30px;
-  margin: 0 15px;
+  margin: 0 auto;
   background-color: var(--color-white);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
@@ -813,7 +824,7 @@ form.secActive .form.first {
 .registration form .title {
   display: block;
   margin-bottom: 8px;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
   margin: 6px 0;
   color: var(--color-dark);
@@ -826,6 +837,13 @@ form.secActive .form.first {
   flex-wrap: wrap;
 }
 
+/* .registration form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+} */
+
 form .fields .input-field {
   display: flex;
   width: calc(100% / 3 - 15px);
@@ -833,13 +851,40 @@ form .fields .input-field {
   margin: 4px 0;
 }
 
+form .fields .output-field {
+  display: flex;
+  width: calc(100% / 3- 15px);
+  flex-direction: column;
+  margin: 30px 0;
+  margin-right: 30px;
+  /* margin: 2.5rem 2rem; */
+}
+
+
+/* .output-field{
+  width: fit-content;
+} */
+
+
+.output-field p {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-dark);
+  text-align: center;
+}
+
+.output-field label {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5rem;
+  color: var(--color-info-dark);
+}
+
 .input-field label {
   font-size: 12px;
   font-weight: 500;
   color: var(--color-info-dark);
 }
-
-
 
 .input-field input,
 select {
@@ -862,6 +907,12 @@ select {
 
 .input-field select,
 .input-field input[type="date"] {
+  color: #707070;
+}
+
+.input-field input[type="file"] {
+  padding-top: 3.5%;
+  justify-content: center;
   color: #707070;
 }
 
@@ -923,4 +974,268 @@ form .buttons button,
   form .fields .input-field {
     width: 100%;
   }
+}
+
+/* complaintform */
+
+complain {
+  margin-top: 3.5rem;
+}
+
+/* .Complaint {
+  margin-top: 1.4rem;
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  padding: 30px;
+  margin: 0 auto;
+  background-color: var(--color-white);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+} */
+
+.contain {
+  margin-top: 1.4rem;
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  padding: 30px;
+  margin: 0 auto;
+  background-color: var(--color-white);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contain h1 {
+  text-align: center;
+  color: #333;
+}
+
+.contain label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-info-dark);
+}
+
+.Complaint h1 {
+  /* text-decoration: underline; */
+  text-align: justify;
+  color: var(--color-success);
+  font-family: 'Poppins';
+  font-weight: 500;
+  font-size: 35px;
+}
+
+.contain input[type="text"],
+input[type="email"] {
+  color: var(--color-dark);
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  font-size: 15px;
+  text-transform: none;
+  outline: none;
+  font-weight: 400;
+  border-radius: 5px;
+  border: 1px solid var(--color-dark);
+  background-color: var(--color-white);
+}
+
+.inputBox {
+  margin: 15px 0;
+}
+
+textarea {
+  color: var(--color-dark);
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  font-size: 15px;
+  text-transform: none;
+  outline: none;
+  font-weight: 400;
+  border-radius: 5px;
+  border: 1px solid var(--color-dark);
+  background-color: var(--color-white);
+}
+
+textarea {
+  height: 100px;
+}
+
+button[type="submit"] {
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  max-width: 150px;
+  width: 100%;
+  border: none;
+  outline: none;
+  color: var(--color-white);
+  border-radius: 5px;
+  margin: 2px;
+  background-color: var(--color-success);
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--color-newgreen);
+}
+
+/* payment */
+payment {
+  margin-top: 3.5rem;
+  /* background-color: var(--color-white); */
+}
+
+.containe {
+  margin-top: 1.4rem;
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  padding: 30px;
+  /* padding-bottom: 0;
+  padding-right: 0; */
+  margin: 0 auto;
+  background-color: var(--color-white);
+  /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); */
+}
+
+.containe form {
+  padding: 0 2rem;
+  width: 700px;
+  background: var(--color-white);
+}
+
+.containe form .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.containe form .row .col {
+  flex: 1 1 250px;
+}
+
+.containe form .row .col .title {
+  color: var(--color-success);
+  font-family: 'Poppins';
+  font-weight: 450;
+  font-size: 35px;
+}
+
+.containe form .row .col .inputBox {
+  margin: 15px 0;
+}
+
+.containe form .row .col .inputBox label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-info-dark);
+}
+
+.containe form .row .col .inputBox input {
+  width: 100%;
+  color: var(--color-dark);
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  font-size: 15px;
+  text-transform: none;
+  outline: none;
+  font-weight: 400;
+  border-radius: 5px;
+  border: 1px solid var(--color-dark);
+  background-color: var(--color-white);
+}
+
+.containe form .row .col .inputBox input:focus {
+  border: 1px solid #000;
+}
+
+.containe form .row .col .flex {
+  display: flex;
+  gap: 15px;
+}
+
+.containe form .row .col .flex .inputBox {
+  margin-top: 5px;
+}
+
+.containe form .row .col .inputBox img {
+  height: 34px;
+  margin-top: 5px;
+  filter: drop-shadow(0 0 1px #000);
+}
+
+.containe form .submit-btn {
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  max-width: 200px;
+  width: 100%;
+  border: none;
+  outline: none;
+  color: var(--color-white);
+  border-radius: 5px;
+  margin: 25px 0;
+  background-color: var(--color-success);
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+.containe form .submit-btn:hover {
+  background-color: var(--color-newgreen);
+}
+
+
+
+/* chat */
+
+.title {
+  padding: 20px 0px 10px 0px;
+  color: var(--color-success);
+  font-weight: 450;
+  font-size: 35px;
+}
+
+.input-box {
+  padding-bottom: 10px;
+}
+
+.message-chat {
+  width: 40%;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  font-size: 15px;
+  text-transform: none;
+  outline: none;
+  font-weight: 400;
+  border-radius: 5px;
+  border: 1px solid var(--color-dark);
+  background-color: var(--color-white);
+}
+
+.submit-button {
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  max-width: 150px;
+  width: 100%;
+  border: none;
+  outline: none;
+  color: var(--color-white);
+  border-radius: 5px;
+  margin: 2px;
+  background-color: var(--color-success);
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: var(--color-newgreen);
 }

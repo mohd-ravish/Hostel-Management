@@ -1,7 +1,12 @@
 const mysql = require("mysql");
 const bcrypt = require("bcryptjs");
 const { promisify } = require("util");
+// const express = require("express");
+// const app = express();
+// // const dotenv = require("dotenv").config();
+// // const cookieParser = require("cookie-parser");
 
+// app.use(express.static('public'));
 const connection = mysql.createConnection({
     host: process.env.HOST,
     user: process.env.DATABASE_USER,
@@ -79,9 +84,17 @@ exports.studentlogin = async function (req, res) {
                 return res.redirect("/student");
 
             } else {
-                return res.status(200).render("dashboard", {
-                    message: "Student logged in"
+                connection.query('SELECT * from student WHERE email = ?', [susername], async (err, result) => {
+                    if (err) {
+                        console.log(err);
+                    } else {
+                        console.log(result);
+                        return res.render("dashboard", {
+                            data1: result
+                        });
+                    }
                 });
+                // return res.status(200).redirect=("/dashboard");
             }
         })
     } catch (err) {
@@ -109,13 +122,14 @@ exports.registration = async function (req, res) {
     var blockno = req.body.blockno;
     var ward = req.body.ward;
 
-    connection.query('SELECT student_name from student WHERE student_name = ?', [stud_name], async (err, results) => {
+
+    connection.query('SELECT * from student WHERE email = ?', [email], async (err, results) => {
         if (err) {
             console.log(err);
         }
         else {
             if (results.length > 0) {
-                return res.send("data exists");
+                return res.redirect("/dashboard")
             }
         }
 
@@ -124,7 +138,7 @@ exports.registration = async function (req, res) {
             if (error) {
                 console.log(error);
             } else {
-                return res.render("dashboard");
+                return res.redirect("/dashboard");
             }
         })
     })
@@ -137,7 +151,7 @@ exports.input = async function (req, res) {
             console.log(error);
 
         } else {
-            return res.redirect("/input");
+            return res.redirect("/dashboard");
         }
     })
 }
