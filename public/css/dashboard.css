@@ -109,7 +109,6 @@ small {
 .profile-photo {
   width: 2.8rem;
   height: 2.8rem;
-  /* border-radius: 50%; */
   overflow: hidden;
 }
 
@@ -154,7 +153,6 @@ aside {
 }
 
 aside .top {
-  /* background: white; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -335,30 +333,6 @@ main .insights svg circle {
   stroke-dasharray: 222;
 
 }
-
-/* main .insights .sales svg circle{
-  stroke-dashoffset: -30;
-  stroke-dasharray: 200;
-}
-main .insights .expenses svg circle{
-  stroke-dashoffset: 20;
-  stroke-dasharray: 80;
-}
-main .insights .income svg circle{
-  stroke-dashoffset: 35;
-  stroke-dasharray: 110;
-} */
-
-/* main .insights .progress .number{
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center; 
-} */
 
 main .insights .progress .number button {
   background-color: transparent;
@@ -745,6 +719,7 @@ main .recent-orders a {
 
 
 /* registration  */
+
 reg {
   margin-top: 3.5rem;
 }
@@ -772,7 +747,7 @@ reg {
 .registration form {
   position: relative;
   margin-top: 16px;
-  min-height: 490px;
+  min-height: 535px;
   background-color: var(--color-white);
   overflow: hidden;
 }
@@ -939,6 +914,7 @@ form .buttons button,
 }
 
 /* complaint form */
+
 complain {
   margin-top: 3.5rem;
 }
@@ -968,7 +944,6 @@ complain {
 }
 
 .Complaint h1 {
-  /* text-decoration: underline; */
   text-align: justify;
   color: var(--color-success);
   font-family: 'Poppins';
