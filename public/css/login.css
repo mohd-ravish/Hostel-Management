@@ -71,6 +71,7 @@ body {
 
 h1 {
     margin: 0;
+	margin-bottom: 10px;
     text-align: center;
     font-size: 22px;
     padding: 8px;
