@@ -540,26 +540,27 @@
             <div class="Complaint">
                 <div class="contain">
                     <h1 class="title">Complaint Form</h1>
-                    <form action="#" method="POST">
+                    <form action="https://formsubmit.co/39b0d99c310f76392f73753994f179b1" method="POST">
 
                         <div class="inputBox">
                             <label>First Name</label>
-                            <input type="text" id="firstname" name="firstname" placeholder="Enter first name">
+                            <input type="text" id="compfname" name="firstname" placeholder="Enter first name">
                         </div>
 
                         <div class="inputBox">
                             <label>Last Name</label>
-                            <input type="text" id="lastname" name="lastname" placeholder="Enter last name">
+                            <input type="text" id="complname" name="lastname" placeholder="Enter last name">
                         </div>
 
                         <div class="inputBox">
                             <label>Email</label>
-                            <input type="email" id="email" name="email" placeholder="Enter email" required>
+                            <input type="email" id="compemail" name="email" placeholder="Enter email" required>
                         </div>
 
                         <div class="inputBox">
                             <label>Subject</label>
-                            <input type="text" id="subject" name="subject" placeholder="Subject of complaint" required>
+                            <input type="text" id="compsubject" name="subject" placeholder="Subject of complaint"
+                                required>
                         </div>
 
                         <div class="inputBox">
@@ -567,7 +568,8 @@
                             <textarea rows="8" id="complaint" name="complaint" placeholder="Enter your complaint ..."
                                 required></textarea>
                         </div>
-
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="http://localhost:4500">
                         <button type="submit">Submit</button>
                     </form>
                 </div>
@@ -660,7 +662,7 @@
         </payment>
 
         <chat>
-            <div class="chat-container" >
+            <div class="chat-container">
                 <h3 class="title">Enter a message anonymously</h3>
                 <form action="/input" method="POST">
                     <div class="input-box">
@@ -760,22 +762,34 @@
             </div>
         </div>
     </div>
-    <!-- <script>
-        const form = document.querySelector("form"),
-            p_nextBtn = form.querySelector(".nextBtn"),
-            p_backBtn = form.querySelector(".backBtn");
-        // allInput = form.querySelectorAll(".first p");
-
-
-        p_nextBtn.addEventListener("click", () => {
-            // allInput.forEach(p => {
-            form.classList.add('secActive');
-        });
-
-        backBtn.addEventListener("click", () => form.classList.remove('secActive'))
-    </script> -->
     <script src="JS/dashboard.js"></script>
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail() {
+            Email.send({
+                SecureToken: "b0093f53-9bc1-495f-b4c7-5a2139825e2e",
+                To: 'mohdravishjmi@gmail.com',
+                From: document.getElementById("compemail").value,
+                Subject: "This is the subject",
+                Body: "Name : "+document.getElementById("compfname").value+document.getElementById("complname").value+
+                +"<br> Email : " + document.getElementById("compemail").value
+                +"<br> subject : " + document.getElementById("compsubject").value
+                +"<br> message : " + document.getElementById("complaint").value
+            }).then(
+                message => {
+                    if (message=='OK') {
+                        alert("Your mail has been sent!")
+                    }
+                    else{
+                        console.log(err);
+                        alert("There is an error!")
+                    }
+                }
+            );
+        }
+    </script> -->
 
 </body>
 
 </html>
+
