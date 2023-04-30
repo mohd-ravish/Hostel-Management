@@ -579,7 +579,7 @@
         <payment>
             <div class="payment-container">
 
-                <form action="#">
+                <form action="/payment" , method="POST">
 
                     <div class="row">
 
@@ -589,30 +589,19 @@
 
                             <div class="inputBox">
                                 <label>full name</label>
-                                <input type="text" placeholder="Enter your name">
+                                <input name="p_name" type="text" placeholder="Enter your name">
                             </div>
                             <div class="inputBox">
                                 <label>email</label>
-                                <input type="email" placeholder="example@example.com">
+                                <input name="p_email" type="email" placeholder="example@example.com">
                             </div>
                             <div class="inputBox">
-                                <label>address</label>
-                                <input type="text" placeholder="room - street - locality">
+                                <label>Amount</label>
+                                <input name="p_amt" type="text" placeholder="total">
                             </div>
                             <div class="inputBox">
-                                <label>city</label>
-                                <input type="text" placeholder="New Delhi">
-                            </div>
-
-                            <div class="flex">
-                                <div class="inputBox">
-                                    <label>state</label>
-                                    <input type="text" placeholder="Delhi">
-                                </div>
-                                <div class="inputBox">
-                                    <label>zip code</label>
-                                    <input type="text" placeholder="123 456">
-                                </div>
+                                <label>Branch</label>
+                                <input name="p_branch" type="text" placeholder="degree">
                             </div>
 
                         </div>
@@ -621,33 +610,11 @@
 
                             <h3 class="title">Payment</h3>
 
-                            <div class="inputBox">
+                            <div>
                                 <label>cards accepted</label>
-                                <img src="css/Images/card_img.png" alt="">
-                            </div>
-                            <div class="inputBox">
-                                <label>name on card</label>
-                                <input type="text" placeholder="Name on card">
-                            </div>
-                            <div class="inputBox">
-                                <label>credit card number</label>
-                                <input type="number" placeholder="1111-2222-3333-4444">
-                            </div>
-                            <div class="inputBox">
-                                <label>exp month</label>
-                                <input type="text" placeholder="January">
+                                <img src="css/Images/paymentQR.png" alt="">
                             </div>
 
-                            <div class="flex">
-                                <div class="inputBox">
-                                    <label>exp year</label>
-                                    <input type="number" placeholder="2022">
-                                </div>
-                                <div class="inputBox">
-                                    <label>CVV</label>
-                                    <input type="text" placeholder="123">
-                                </div>
-                            </div>
 
                         </div>
 
@@ -792,4 +759,3 @@
 </body>
 
 </html>
-

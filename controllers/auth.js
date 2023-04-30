@@ -11,6 +11,8 @@ const connection = mysql.createConnection({
 
 connection.query("create table if not exists admin(user_id int not null primary key auto_increment,user_name varchar(255),user_pass varchar(255));");
 
+connection.query("create table if not exists payment(p_name varchar(255),p_email varchar(255),p_amt varchar(255),p_branch varchar(255));");
+
 connection.query("create table if not exists loginuser(user_id int not null primary key auto_increment,user_name varchar(255),user_pass varchar(255));");
 
 connection.query("create table if not exists student(s_id int not null primary key auto_increment,student_name varchar(255),dob varchar(255),fathername varchar(255),mobileno varchar(255),gender varchar(255),email varchar(255),id_type varchar(255),id_no varchar(255),faculty varchar(255),dept varchar(255),issue varchar(255),expiry varchar(255),address_type varchar(255),nationality varchar(255),state varchar(255),district varchar(255),blk_no varchar(255),ward_no varchar(255));");
@@ -148,6 +150,37 @@ exports.input = async function (req, res) {
             return res.redirect("/dashboard");
         }
     })
+}
+
+exports.chat = async function (req, res) {
+    connection.query('SELECT * from chat ORDER BY c_id DESC', async (err, result) => {
+        if (err) {
+            console.log(err);
+        } else {
+            if (result.length > 0) {
+                console.log(result);
+                return res.render("chats", { data: result });
+            }
+        }
+    })
+}
+
+
+
+exports.payment = async function (req, res) {
+    var p_name = req.body.p_name;
+    var p_email = req.body.p_email;
+    var p_amt = req.body.p_amt;
+    var p_branch = req.body.p_branch;
+
+    connection.query("insert into payment(p_name,p_email,p_amt,p_branch) values(? , ? , ? , ?)", [p_name, p_email, p_amt, p_branch], async function (error, results, fields) {
+        if (error) {
+            console.log(error);
+        } else {
+            return res.redirect("/dashboard");
+        }
+    })
+
 }
 
 exports.chat = async function (req, res) {
