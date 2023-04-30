@@ -7,11 +7,11 @@ router.get('/', (req, res) => {
 });
 
 router.get('/student', (req, res) => {
-    res.render("student", {error : req.flash('error'), success : req.flash('success')})
+    res.render("student", { error: req.flash('error'), success: req.flash('success') })
 });
 
 router.get('/login', (req, res) => {
-    res.render("login", {error : req.flash('error')});
+    res.render("login", { error: req.flash('error') });
 });
 
 router.get('/mess', (req, res) => {
@@ -26,9 +26,13 @@ router.get('/rules', (req, res) => {
     res.render("rules")
 });
 
+router.get('/chats', (req, res) => {
+    res.render("chats")
+});
+
 router.get('/dashboard', authController.studentlogin, (req, res) => {
     if (req.user) {
-    res.render("dashboard", {message: stud_name});
+        res.render("dashboard");
     } else {
         res.render("student");
     }

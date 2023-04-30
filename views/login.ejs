@@ -40,6 +40,9 @@
                         <li class=" nav-item">
                             <a class="navTxt nav-link" aria-current="page" href="/">Home</a>
                         </li>
+                        <li class=" nav-item">
+                            <a class="navTxt nav-link" aria-current="page" href="student">Student</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -60,12 +63,12 @@
 
     <!-- loginbox -->
     <div class="loginbox">
-        <h1>Login Here</h1>
+        <h1>Admin Account</h1>
         <form action="/adlogin" method="POST">
             <p>Email</p>
-            <input type="email" name="username" placeholder="Enter Email">
+            <input type="email" name="username" placeholder="Enter Email" required>
             <p>Password</p>
-            <input type="password" name="password" placeholder="Enter Password">
+            <input type="password" name="password" placeholder="Enter Password" required>
             <input type="submit" name="submit" value="Login">
             <a href="#">Forgotten your password?</a><br>
             <a href="#">Don't have an account?</a>

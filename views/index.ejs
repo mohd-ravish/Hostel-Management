@@ -22,120 +22,92 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap" rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
     <!-- css -->
     <link rel="stylesheet" href="css/styles.css">
-
-    <!-- Title -->
-    <title>JMI Hostel</title>
+    <title>Hostel</title>
 </head>
 
 <body>
     <!-- navbar -->
-    <div class="nav-bg">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-                <img class="navbar-brand logo" src="css/Images/logo.png" alt="">
-                <h3 class="heading">JMI HOSTEL</h3>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto">
-                        <li class=" nav-item">
-                            <a class="navTxt nav-link" aria-current="page" href="/">Home</a>
-                        </li>
-
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle navTxt " href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                About
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="mess">Mess</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="fee">Fee Structure</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="rules">Rules & regulations</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="navTxt nav-link" href="#contact">Contact</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle navTxt loginButton" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Login
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="login">Admin</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="student">Student</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+    <section class="header">
+        <nav>
+            <a href="/"><img src="css/Images/logo2.png"></a>
+            <h2 class="heading">JMI HOSTEL</h2>
+            <div class="nav-links" id="navLinks">
+                <span class="icon material-symbols-outlined" onClick="hideMenu()">close</span>
+                <ul>
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="mess">ABOUT</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                    <li><a href="student">LOGIN</a></li>
+                </ul>
             </div>
+            <span class="icon material-symbols-outlined" onClick="showMenu()">menu</span>
         </nav>
-    </div>
 
-    <!-- Hostel Image -->
-    <div>
-        <img src="css/Images/main-img.jpg" class="img-fluid background" alt="">
-    </div>
+        <div class="text-box">
+            <h1>Jamia Millia Islamia</h1>
+            <p>Discover the Best Hostel Experience at Jamia Millia Islamia"<br>A Safe and Comfortable Stay</p>
+            <a href="#about" class="hero-btn">Visit Us to know more</a>
+        </div>
+    </section>
 
     <!-- About -->
     <div id="about">
         <h1>ABOUT</h1>
-        <p class="aboutTxt">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem, dolor. Facere voluptate
-            earum fugiat
-            laborum saepe iste necessitatibus eum repudiandae. Cum neque facilis vel dolorum ut nulla? Nisi fugiat quas
-            voluptate accusamus dicta, sint laborum, possimus, vitae ea ipsa praesentium doloribus porro labore atque
-            autem dignissimos ipsam assumenda sapiente nesciunt alias cupiditate eum. Voluptatibus dolorum porro
-            nesciunt omnis non quaerat odio quam veniam tempore, quos error commodi doloribus unde laudantium pariatur
-            accusamus. Nulla illo saepe distinctio veniam temporibus aliquam quisquam suscipit, ex aut doloremque,
-            dolores nisi odio, soluta impedit perferendis? Odio voluptas iure, eligendi vero, error nam non reiciendis
-            delectus dolor libero numquam! Quibusdam dolor nam temporibus! Exercitationem odio ut ratione deleniti
-            provident enim vero eum quasi sint! Fugit, adipisci modi. Facilis distinctio culpa soluta consectetur
-            molestias. Quo repellendus officia minima ut qui. Alias aperiam aut illo velit voluptas provident itaque.
-            Tempore distinctio doloribus neque, eveniet, eaque suscipit odit ratione dolorem quidem illum, facere quos
-            commodi repellat. Dolores, hic in? Incidunt quibusdam eligendi id dolorum est consectetur itaque vitae
+        <p class="aboutTxt">Jamia Millia Islamia ('National Islamic University') is a central university located in
+            New Delhi, India. Originally established at Aligarh, United Provinces (present-day Uttar Pradesh, India)
+            during the British Raj in 1920, it moved to its current location in Okhla in 1935. It was given the deemed
+            status by University Grants Commission in 1962. On 26 December 1988, it became a central university.
+            <br>
+            The foundation committee of the university included Abdul Bari Firangi Mahali, Hussain Ahmad Madani,
+            Muhammad Iqbal, Sanaullah Amritsari, Syed Mehmood and others. Its foundation stone was laid by Mahmud Hasan
+            Deobandi, the leader of Silk Letter Movement and the first student of Darul Uloom Deoband. Ali
+            Jauhar served as its first vice-chancellor from 1920 to 1923, and Hakim Ajmal Khan served as the first
+            chancellor from 1920 to 1927. On 26 May 2017, Najma Heptulla became 11th Chancellor of the university, and
+            Najma Akhtar became the 15th Vice Chancellor in April 2019. On 13th March 2023, Mufaddal Saifuddin was
+            elected the 12th Chancellor of the university, replacing Najma Heptulla.
+            <br>
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1752.0769347724772!2d77.28157174748547!3d28.565141896773145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce38bc0a324fd%3A0x400656f511447dbe!2sDr%20BR%20Ambedkar%20Hostel!5e0!3m2!1sen!2sin!4v1679332315373!5m2!1sen!2sin"
                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
-            voluptate quisquam dicta. Nesciunt sed eaque rem officia hic ab quas totam reiciendis eveniet fugit. Omnis
-            laudantium ad quia dolorem, expedita corporis incidunt? Nostrum repudiandae voluptate est, quaerat
-            explicabo, esse quia obcaecati nobis, ullam accusamus rem pariatur reprehenderit neque perferendis fugit
-            nihil dicta dolores minus placeat optio! Asperiores odio, eveniet quibusdam magnam eum unde quidem
-            perferendis. Reprehenderit consequuntur excepturi sequi minima. Sit, consequuntur ipsum qui unde illum
-            distinctio illo ullam repellat, quos sint, quam laudantium laborum! Tempore exercitationem esse velit porro
-            optio? Ea dolorem id, illo laboriosam amet quae minima tenetur quia magni facere velit eaque quidem qui
-            recusandae fugiat earum veniam corrupti repudiandae? Commodi voluptatem aliquid, suscipit itaque libero
-            perspiciatis ea illo recusandae blanditiis adipisci eveniet! At autem nulla aperiam ab recusandae maxime
-            quibusdam illum id ipsum provident, assumenda eveniet doloribus qui, quasi adipisci voluptate, esse debitis
-            vitae ipsam! Deserunt laboriosam animi cumque vel, quod fuga optio esse asperiores similique tempora
-            eligendi, itaque accusantium, cupiditate non recusandae commodi nihil sequi pariatur neque doloremque sint!
-            Ullam voluptatibus molestias reprehenderit ex? Perspiciatis, commodi libero natus cumque aliquid asperiores
-            sint quasi qui, illum earum at dolorum ab quod sunt quo aspernatur necessitatibus quia? Similique
-            dignissimos vitae totam maxime veniam, rerum cupiditate aspernatur quasi dolorum recusandae placeat nobis
-            tempora veritatis assumenda consequatur voluptate harum quia vero facere reprehenderit ipsa, doloremque,
-            error ad? Laboriosam exercitationem amet quisquam error eos. Assumenda in eius obcaecati nam ad optio soluta
-            voluptate, hic architecto. Labore autem voluptatum sit facere sed aperiam molestias modi! Facilis iste sint
-            laboriosam consequuntur ea possimus quae exercitationem, vel quasi, eaque velit vitae mollitia accusamus
-            quia repudiandae ab nobis quo animi sit aperiam magni eligendi. Neque quod blanditiis maiores, aliquid
-            laudantium obcaecati alias id non autem modi voluptatum deleniti ipsum nam omnis a facilis perferendis,
-            necessitatibus quidem! Consequuntur cumque dolor iusto eaque eius corrupti quo quasi sunt laudantium ab
-            tenetur magni neque dignissimos harum labore ipsam rem quisquam, nobis veritatis doloribus! Totam,
-            laboriosam ab quaerat aperiam, earum atque dolorem commodi debitis minus repellendus quidem nobis!
+            In 2020, Jamia Millia Islamia was ranked 1st among all central universities in the country in rankings
+            released by Ministry of Education of India. In December 2021, the university received an 'A++' ranking by
+            National Assessment and Accreditation Council.
+            <br>
+            Jamia Millia Islamia was established in Aligarh on 29 October 1920 by Mohammad Ali Jauhar, Hakim Ajmal Khan,
+            Mukhtar Ahmed Ansari, Abdul Majeed Khwaja, and Zakir Hussain under the presidency of Mahmud Hasan Deobandi.
+            It was established mainly in response to the demand of some students of the Aligarh Muslim University for a
+            new National Muslim University which would be free from government influence as they felt that the
+            administration of Aligarh Muslim University was of pro-British stance.
+            <br>
+            It was conceived as a national institution that would offer progressive education and an emphasis on Indian
+            nationalism to students from all communities, particularly Muslims. Zakir Hussain described "the movement of
+            Jamia Millia Islamia as a struggle for education and cultural renaissance that aims to prepare a blueprint
+            for Indian Muslims which may focus on Islam but simultaneously evolve a national culture for common Indian.
+            It will lay the foundation of the thinking that true religious education will promote patriotism and
+            national integration among Indian Muslims, who will be proud to take part in the future progress of India,
+            which will play its part in the comity of nations for peace and development. The objective of establishment
+            of Jamia Millia Islamia will be to lay down the common curriculum for Indian Muslims taking into account the
+            future challenges and will prepare the children to be masters of future" The emergence of Jamia was
+            supported by Mahatma Gandhi, who felt that Jamia Millia Islamia could shape lives of hundreds and thousands
+            of students on the basis of a shared culture and worldview.
+            <br>
+            In 1925, Jamia Millia Islamia moved from Aligarh to Karol Bagh, New Delhi. On 1 March 1935, the foundation
+            stone for a school building was laid at Okhla, then a nondescript village in the southern outskirts of
+            Delhi. In 1936, all institutions of Jamia Millia Islamia except Jamia Press, the Maktaba, and the library
+            moved to the new campus.
         </p>
     </div>
 
@@ -204,3 +176,16 @@
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
 </body>
+
+<script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu() {
+        navLinks.style.right = "0";
+    }
+    function hideMenu() {
+        navLinks.style.right = "-200px";
+    }
+</script>
+</body>
+
+</html>
