@@ -7,7 +7,7 @@ const logoutBtn = document.querySelector('.logout');
 const dashboardSelector = document.querySelector("#dashboard");
 const profileSelector = document.querySelector("#profile");
 const chatSelector = document.querySelector("#chat");
-// const settingsSelector = document.querySelector("#settings");
+const settingsSelector = document.querySelector("#settings");
 const complainSelector = document.querySelector("#complain");
 const paymentSelector = document.querySelector("#payment");
 
@@ -15,7 +15,6 @@ document.querySelector("reg").style.display = 'none';
 document.querySelector("complain").style.display = 'none';
 document.querySelector("payment").style.display = 'none';
 document.querySelector("chat").style.display = 'none';
-
 
 
 menuBtn.addEventListener('click', () => {
@@ -42,7 +41,7 @@ dashboardSelector.addEventListener('click', function () {
     profileSelector.classList.remove("active");
     complainSelector.classList.remove("active");
     chatSelector.classList.remove("active");
-    // settingsSelector.classList.remove("active");
+    settingsSelector.classList.remove("active");
     document.querySelector("main").style.display = 'block';
     document.querySelector("reg").style.display = 'none';
     document.querySelector("complain").style.display = 'none';
@@ -55,7 +54,7 @@ profileSelector.addEventListener('click', function () {
     complainSelector.classList.remove("active");
     dashboardSelector.classList.remove("active");
     chatSelector.classList.remove("active");
-    // settingsSelector.classList.remove("active");
+    settingsSelector.classList.remove("active");
     document.querySelector("main").style.display = 'none';
     document.querySelector("reg").style.display = 'block';
     document.querySelector("complain").style.display = 'none';
@@ -69,7 +68,7 @@ complainSelector.addEventListener('click', function () {
     profileSelector.classList.remove("active");
     dashboardSelector.classList.remove("active");
     chatSelector.classList.remove("active");
-    // settingsSelector.classList.remove("active");
+    settingsSelector.classList.remove("active");
     document.querySelector("main").style.display = 'none';
     document.querySelector("reg").style.display = 'none';
     document.querySelector("complain").style.display = 'block';
@@ -83,7 +82,7 @@ paymentSelector.addEventListener('click', function () {
     complainSelector.classList.remove("active");
     dashboardSelector.classList.remove("active");
     chatSelector.classList.remove("active");
-    // settingsSelector.classList.remove("active");
+    settingsSelector.classList.remove("active");
     document.querySelector("main").style.display = 'none';
     document.querySelector("reg").style.display = 'none';
     document.querySelector("complain").style.display = 'none';
@@ -97,7 +96,7 @@ chatSelector.addEventListener('click', function () {
     paymentSelector.classList.remove("active");
     profileSelector.classList.remove("active");
     dashboardSelector.classList.remove("active");
-    // settingsSelector.classList.remove("active");
+    settingsSelector.classList.remove("active");
     document.querySelector("main").style.display = 'none';
     document.querySelector("reg").style.display = 'none';
     document.querySelector("complain").style.display = 'none';
@@ -111,7 +110,7 @@ settingsSelector.addEventListener('click', function () {
     chatSelector.classList.remove("active");
     profileSelector.classList.remove("active");
     dashboardSelector.classList.remove("active");
-    // settingsSelector.classList.add("active");
+    settingsSelector.classList.add("active");
 });
 
 // document.querySelectorAll("#dashboard").addEventListener("click", function(){
@@ -125,9 +124,6 @@ const d = n.getDate();
 const h = n.getHours();
 const mn = n.getMinutes();
 document.getElementById("date").innerHTML = d + " / " + m + " / " + y + "  -  " + h + " : " + mn;
-
-
-
 
 
 const form = document.querySelector("form"),
