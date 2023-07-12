@@ -1,171 +1,87 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
-
-  <!-- Font Awesome icons -->
-  <script src="https://kit.fontawesome.com/70f8fc0a39.js" crossorigin="anonymous"></script>
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@500&display=swap" rel="stylesheet" />
+<%- include("partials/header"); -%>
 
   <!-- css -->
   <link rel="stylesheet" href="css/mess.css" />
 
   <!-- Title -->
   <title>Mess Menu</title>
-</head>
+  </head>
 
-<body>
-  <!-- navbar -->
-  <div class="nav-bg">
-    <nav class="navbar navbar-expand-lg">
-      <div class="container-fluid">
-        <h3 class="heading">JMI HOSTEL</h3>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto">
-            <li class=" nav-item">
-              <a class="navTxt nav-link" aria-current="page" href="/">Home</a>
-            </li>
-            <li class=" nav-item">
-              <a class="navTxt nav-link" aria-current="page" href="mess">Mess</a>
-            </li>
-            <li class=" nav-item">
-              <a class="navTxt nav-link" aria-current="page" href="fee">Fee Structure</a>
-            </li>
-            <li class="nav-item">
-              <a class="navTxt nav-link" href="rules">Rules & Regulations</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle loginButton" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Login
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="login">Admin</a></li>
+  <body>
+
+    <%- include("partials/navbar"); -%>
+    <!-- buttons -->
+    <section class="buttons">
+      <button type="button" class="btn btn-secondary sat sat-size">Saturday</button>
+      <button type="button" class="btn btn-secondary sun">Sunday</button>
+      <button type="button" class="btn btn-secondary mon">Monday</button>
+      <button type="button" class="btn btn-secondary tue">Tuesday</button>
+      <button type="button" class="btn btn-secondary wed">Wednesday</button>
+      <button type="button" class="btn btn-secondary thu">Thursday</button>
+      <button type="button" class="btn btn-secondary fri">Friday</button>
+    </section>
+
+    <h1 class="heading2">Minimum expected menu on Saturday</h1>
+
+    <!-- cards -->
+    <section>
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-6">
+          <div class="card">
+            <div class="card-header">
+              <h3>Breakfast</h3>
+            </div>
+            <div class="card-body breakfast">
+              <ul>
+                <li>Brown Bread(3)</li>
                 <li>
-                  <hr class="dropdown-divider">
+                  &nbsp;&nbsp;&nbsp;Amul Butter(1/6) of 100gm /Tops Fruit Jam /
+                  Boiled Egg
                 </li>
-                <li><a class="dropdown-item" href="student">Student</a></li>
+                <li>Tea</li>
               </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </div>
-
-  <!-- buttons -->
-  <section class="buttons">
-    <button type="button" class="btn btn-danger sat sat-size">Saturday</button>
-    <button type="button" class="btn btn-dark sun">Sunday</button>
-    <button type="button" class="btn btn-secondary mon">Monday</button>
-    <button type="button" class="btn btn-warning tue">Tuesday</button>
-    <button type="button" class="btn btn-success wed">Wednesday</button>
-    <button type="button" class="btn btn-info thu">Thursday</button>
-    <button type="button" class="btn btn-primary fri">Friday</button>
-  </section>
-
-  <h1 class="heading2">Minimum expected menu on Saturday</h1>
-
-  <!-- cards -->
-  <section>
-    <div class="row">
-      <div class="col-lg-4 col-md-4 col-sm-6">
-        <div class="card">
-          <div class="card-header">
-            <h3>Breakfast</h3>
-          </div>
-          <div class="card-body breakfast">
-            <ul>
-              <li>Brown Bread(3)</li>
-              <li>
-                &nbsp;&nbsp;&nbsp;Amul Butter(1/6) of 100gm /Tops Fruit Jam /
-                Boiled Egg
-              </li>
-              <li>Tea</li>
-            </ul>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="col-lg-4 col-md-4 col-sm-6">
-        <div class="card">
-          <div class="card-header">
-            <h3>Lunch</h3>
+        <div class="col-lg-4 col-md-4 col-sm-6">
+          <div class="card">
+            <div class="card-header">
+              <h3>Lunch</h3>
+            </div>
+            <div class="card-body lunch">
+              <ul>
+                <li>Aalu Palak / Seasonal Veg.</li>
+                <li>Rice</li>
+                <li>Daal</li>
+                <li>Roti</li>
+                <li>Salad(Onion/Gajar/Muli/Kheera)</li>
+              </ul>
+            </div>
           </div>
-          <div class="card-body lunch">
-            <ul>
-              <li>Aalu Palak / Seasonal Veg.</li>
-              <li>Rice</li>
-              <li>Daal</li>
-              <li>Roti</li>
-              <li>Salad(Onion/Gajar/Muli/Kheera)</li>
-            </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6">
+          <div class="card">
+            <div class="card-header">
+              <h3>Dinner</h3>
+            </div>
+            <div class="card-body dinner">
+              <h4>Non-Veg</h4>
+              <ul>
+                <li>Chicken Biriany</li>
+                <li>Raita(Boondi)</li>
+              </ul>
+              <h4>Veg.</h4>
+              <ul>
+                <li>Mutter Paneer</li>
+                <li>Pulao</li>
+                <li>Raita(Boondi)</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="col-lg-4 col-md-4 col-sm-6">
-        <div class="card">
-          <div class="card-header">
-            <h3>Dinner</h3>
-          </div>
-          <div class="card-body dinner">
-            <h4>Non-Veg</h4>
-            <ul>
-              <li>Chicken Biriany</li>
-              <li>Raita(Boondi)</li>
-            </ul>
-            <h4>Veg.</h4>
-            <ul>
-              <li>Mutter Paneer</li>
-              <li>Pulao</li>
-              <li>Raita(Boondi)</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- footer -->
-  <footer>
-    <div class="container">
-      <div>
-        <h6>Campus A</h6>
-        <div>New Boys</div>
-        <div>Allamah Iqbal</div>
-        <div>Kellat</div>
-
-      </div>
-      <div>
-        <h6>Campus B</h6>
-        <div>Ambedkar</div>
-        <div>FRK</div>
-        <div>Khwaja</div>
-      </div>
-    </div>
-    <p>© 2023 All Rights Reserved Jamia Millia Islamia</p>
-  </footer>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="css/mess.js" charset="utf-8"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-    crossorigin="anonymous"></script>
-</body>
-
-</html>
+    <%- include("partials/footer"); -%>
