@@ -46,22 +46,20 @@
           <span class="material-icons-sharp">person_outline</span>
           <h3>Profile</h3>
         </a>
+        <a id="settings" href="#">
+          <span class="material-icons-sharp">settings</span>
+          <h3>Settings</h3>
+        </a>
         <a id="message" href="#">
           <span class="material-icons-sharp">mail_outline</span>
           <h3>Messages</h3>
           <span class="message-count">New</span>
-        </a>
-        <a id="settings" href="#">
-          <span class="material-icons-sharp">settings</span>
-          <h3>Settings</h3>
         </a>
         <a class="logout" href="#">
           <span class="material-icons-sharp">logout</span>
           <h3>Logout</h3>
         </a>
     </aside>
-
-
 
     <main>
       <h1>Dashoard</h1>
@@ -135,7 +133,363 @@
     </main>
 
     <reg>
-      <div class="registration">
+      <data>
+        <div class="registration">
+          <h3 class="data-title">Enter Student ID to search record</h3>
+          <form action="/database" method="POST">
+            <div class="data-box">
+              <input type="text" class="student-id" name="student-id" placeholder="Enter student ID" autocomplete="off" required>
+            </div>
+            <button class="data-button" type="submit">Submit</button>
+          </form>
+        </div>
+        <reg>
+          <div class="registration">
+              <%if(data1.length> 0) {%>
+                  <h1>Profile</h1>
+                  <form action="/database" method="POST">
+                      <div class="form first">
+                          <div class="details personal">
+                              <span class="title">Personal Details</span>
+
+                              <div class="fields">
+                                  <div class="output-field">
+                                      <label>Full Name</label>
+                                      <p>
+                                          <%= data1[0].student_name %>
+                                      </p>
+                                      <!-- <input name="stud_name" type="text" placeholder="Enter your name" required> -->
+                                  </div>
+
+                                  <div class="output-field">
+                                      <label>Date of Birth</label>
+                                      <p>
+                                          <%= data1[0].dob %>
+                                      </p>
+                                      <!-- <input name="dob" type="date" placeholder="Enter birth date" required> -->
+                                  </div>
+
+                                  <div class="output-field">
+                                      <label>Father's Name</label>
+                                      <p>
+                                          <%= data1[0].fathername %>
+                                      </p>
+                                      <!-- <input name="father_name" type="text" placeholder="Enter your Father's Name" required> -->
+                                  </div>
+
+                                  <div class="output-field">
+                                      <label>Mobile Number</label>
+                                      <p>
+                                          <%= data1[0].mobileno %>
+                                      </p>
+                                      <!-- <input name="mob_no" type="number" placeholder="Enter mobile number" required> -->
+                                  </div>
+
+                                  <div class="output-field">
+                                      <label>Gender</label>
+                                      <p>
+                                          <%= data1[0].gender %>
+                                      </p>
+                                  </div>
+
+                                  <div class="output-field">
+                                      <label>Email</label>
+                                      <p>
+                                          <%= data1[0].email %>
+                                      </p>
+                                      <!-- <input name="email" type="text" placeholder="Enter your Email" required> -->
+                                  </div>
+                              </div>
+                          </div>
+
+                          <div class="details ID">
+                              <span class="title">Identity Details</span>
+
+                              <div class="fields">
+                                  <div class="output-field">
+                                      <label>ID Card</label>
+                                      <p>
+                                          Uploaded
+                                      </p>
+                                      <!-- <input name="id_type" type="text" placeholder="Enter ID type" required> -->
+                                  </div>
+
+                                  <div class="output-field">
+                                      <label>ID Number</label>
+                                      <p>
+                                          <%= data1[0].id_no %>
+                                      </p>
+                                      <!-- <input name="id_no" type="number" placeholder="Enter ID number" required> -->
+                                  </div>
+
+                                  <div class="output-field">
+                                      <label>Faculty</label>
+                                      <p>
+                                          <%= data1[0].faculty %>
+                                      </p>
+                                      <!-- <output name="faculty" type="text" placeholder="Enter Faculty" required> -->
+                                  </div>
+
+                                  <div class="output-field">
+                                      <label>Department</label>
+                                      <p>
+                                          <%= data1[0].dept %>
+                                      </p>
+                                      <!-- <output name="dept" type="text" placeholder="Enter Department" required> -->
+                                  </div>
+
+                                  <div class="output-field">
+                                      <label>Issued Date</label>
+                                      <p>
+                                          <%= data1[0].issue %>
+                                      </p>
+                                      <!-- <output name="issuse" type="date" placeholder="Enter your issued date" required> -->
+                                  </div>
+
+                                  <div class="output-field">
+                                      <label>Expiry Date</label>
+                                      <p>
+                                          <%= data1[0].expiry %>
+                                      </p>
+                                      <!-- <output name="expiry" type="date" placeholder="Enter expiry date" required> -->
+                                  </div>
+                              </div>
+                              <div class="details address">
+                                  <span class="title">Address Details</span>
+
+                                  <div class="fields">
+                                      <div class="output-field">
+                                          <label>Address Type</label>
+                                          <p>
+                                              <%= data1[0].address_type %>
+                                          </p>
+                                          <!-- <output name="add_type" type="text" placeholder="Permanent or Temporary" required> -->
+                                      </div>
+
+                                      <div class="output-field">
+                                          <label>Nationality</label>
+                                          <p>
+                                              <%= data1[0].nationality %>
+                                          </p>
+                                          <!-- <output name="nationality" type="text" placeholder="Enter nationality" required> -->
+                                      </div>
+
+                                      <div class="output-field">
+                                          <label>State</label>
+                                          <p>
+                                              <%= data1[0].state %>
+                                          </p>
+                                          <!-- <output name="state" type="text" placeholder="Enter your state" required> -->
+                                      </div>
+
+                                      <div class="output-field">
+                                          <label>District</label>
+                                          <p>
+                                              <%= data1[0].district %>
+                                          </p>
+                                          <!-- <output name="district" type="text" placeholder="Enter your district" required> -->
+                                      </div>
+
+                                      <div class="output-field">
+                                          <label>Block Number</label>
+                                          <p>
+                                              <%= data1[0].blk_no %>
+                                          </p>
+                                          <!-- <output name="blockno" type="number" placeholder="Enter block number" required> -->
+                                      </div>
+
+                                      <div class="output-field">
+                                          <label>Ward Number</label>
+                                          <p>
+                                              <%= data1[0].ward_no %>
+                                          </p>
+                                          <!-- <input name="ward" type="number" placeholder="Enter ward number" required> -->
+                                      </div>
+                                  </div>
+                              </div>
+                              <!-- <button class="nextBtn p_nextBtn">
+                                  <span class="btnText">Next</span>
+                                  <i class="uil uil-navigator"></i>
+                              </button> -->
+                          </div>
+                      </div>
+                      <div class="form second">
+                          <div class="details family">
+                              <div class="buttons">
+                                  <div class="backBtn p_backBtn">
+                                      <i class="uil uil-navigator"></i>
+                                      <span class="btnText">Back</span>
+                                  </div>
+
+                                  <button type="submit" class="sumbit">
+                                      <span class="btnText">Submit</span>
+                                      <i class="uil uil-navigator"></i>
+                                  </button>
+                              </div>
+                          </div>
+                      </div>
+                  </form>
+
+
+
+                  <% } else { %>
+                      <h1>Registration</h1>
+                      <form action="/registration" method="POST">
+                          <div class="form first">
+                              <div class="details personal">
+                                  <span class="title">Personal Details</span>
+
+                                  <div class="fields">
+                                      <div class="input-field">
+                                          <label>Full Name</label>
+                                          <input name="stud_name" type="text" placeholder="Enter your name" required>
+                                      </div>
+
+                                      <div class="input-field">
+                                          <label>Date of Birth</label>
+                                          <input name="dob" type="date" placeholder="Enter birth date" required>
+                                      </div>
+
+                                      <div class="input-field">
+                                          <label>Father's Name</label>
+                                          <input name="father_name" type="text" placeholder="Enter your Father's Name"
+                                              required>
+                                      </div>
+
+                                      <div class="input-field">
+                                          <label>Mobile Number</label>
+                                          <input name="mob_no" type="number" placeholder="Enter mobile number"
+                                              required>
+                                      </div>
+
+                                      <div class="input-field">
+                                          <label>Gender</label>
+                                          <select required name="gen">
+                                              <option disabled selected>Select gender</option>
+                                              <option>Male</option>
+                                              <option>Female</option>
+                                              <option>Others</option>
+                                          </select>
+                                      </div>
+
+                                      <div class="input-field">
+                                          <label>Email</label>
+                                          <input name="email" type="text" placeholder="Enter your Email" required>
+                                      </div>
+                                  </div>
+                              </div>
+
+                              <div class="details ID">
+                                  <span class="title">Identity Details</span>
+
+                                  <div class="fields">
+                                      <!-- <div class="input-field">
+                                          <label>ID Card</label>
+                                          <input name="id_type" type="text" placeholder="Enter ID type" required>
+                                      </div> -->
+
+                                      <div class="input-field">
+                                          <label>ID Card</label>
+                                          <input name="id_type" type="file" placeholder="Upload" required>
+                                      </div>
+
+                                      <div class="input-field">
+                                          <label>ID Number</label>
+                                          <input name="id_no" type="text" placeholder="Enter ID number" required>
+                                      </div>
+
+                                      <div class="input-field">
+                                          <label>Faculty</label>
+                                          <input name="faculty" type="text" placeholder="Enter Faculty" required>
+                                      </div>
+
+                                      <div class="input-field">
+                                          <label>Department</label>
+                                          <input name="dept" type="text" placeholder="Enter Department" required>
+                                      </div>
+
+                                      <div class="input-field">
+                                          <label>Issued Date</label>
+                                          <input name="issuse" type="date" placeholder="Enter your issued date"
+                                              required>
+                                      </div>
+
+                                      <div class="input-field">
+                                          <label>Expiry Date</label>
+                                          <input name="expiry" type="date" placeholder="Enter expiry date" required>
+                                      </div>
+
+
+                                  </div>
+
+                                  <button class="nextBtn">
+                                      <span class="btnText">Next</span>
+                                      <i class="uil uil-navigator"></i>
+                                  </button>
+                              </div>
+                          </div>
+
+                          <div class="form second">
+                              <div class="details address">
+                                  <span class="title">Address Details</span>
+
+                                  <div class="fields">
+                                      <div class="input-field">
+                                          <label>Address Type</label>
+                                          <input name="add_type" type="text" placeholder="Permanent or Temporary"
+                                              required>
+                                      </div>
+
+                                      <div class="input-field">
+                                          <label>Nationality</label>
+                                          <input name="nationality" type="text" placeholder="Enter nationality"
+                                              required>
+                                      </div>
+
+                                      <div class="input-field">
+                                          <label>State</label>
+                                          <input name="state" type="text" placeholder="Enter your state" required>
+                                      </div>
+
+                                      <div class="input-field">
+                                          <label>District</label>
+                                          <input name="district" type="text" placeholder="Enter your district"
+                                              required>
+                                      </div>
+
+                                      <div class="input-field">
+                                          <label>Block Number</label>
+                                          <input name="blockno" type="number" placeholder="Enter block number"
+                                              required>
+                                      </div>
+
+                                      <div class="input-field">
+                                          <label>Ward Number</label>
+                                          <input name="ward" type="number" placeholder="Enter ward number" required>
+                                      </div>
+                                  </div>
+                              </div>
+
+                              <div class="details family">
+                                  <div class="buttons">
+                                      <div class="backBtn">
+                                          <i class="uil uil-navigator"></i>
+                                          <span class="btnText">Back</span>
+                                      </div>
+
+                                      <button type="submit" class="sumbit">
+                                          <span class="btnText">Submit</span>
+                                          <i class="uil uil-navigator"></i>
+                                      </button>
+                                  </div>
+                              </div>
+                          </div>
+                      </form>
+                      <% } %>
+          </div>
+      </reg>
+      </data>
+      <!-- <div class="registration">
         <h1>Registration</h1>
         <form action="#">
           <div class="form first">
@@ -308,9 +662,8 @@
             </div>
           </div>
         </form>
-      </div>
+      </div> -->
     </reg>
-
 
     <div class="right">
       <div class="top">
@@ -331,7 +684,6 @@
           </div>
         </div>
       </div>
-
 
       <div class="recent-updates">
         <h2>Recent Updates</h2>

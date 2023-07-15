@@ -1,4 +1,4 @@
-const mysql = require("mysql");
+const mysql = require("mysql2");
 const bcrypt = require("bcryptjs");
 const { promisify } = require("util");
 
@@ -135,6 +135,48 @@ exports.registration = async function (req, res) {
                 console.log(error);
             } else {
                 return res.redirect("/dashboard");
+            }
+        })
+    })
+}
+
+exports.database = async function (req, res) {
+    var stud_name = req.body.stud_name;
+    var dob = req.body.dob;
+    var father_name = req.body.father_name;
+    var mob_no = req.body.mob_no;
+    var gen = req.body.gen;
+    var email = req.body.email;
+    var id_type = req.body.id_type;
+    var id_no = req.body.id_no;
+    var faculty = req.body.faculty;
+    var dept = req.body.dept;
+    var issuse = req.body.issuse;
+    var expiry = req.body.expiry;
+    var add_type = req.body.add_type;
+    var nationality = req.body.nationality;
+    var state = req.body.state;
+    var district = req.body.district;
+    var blockno = req.body.blockno;
+    var ward = req.body.ward;
+
+
+    connection.query('SELECT * from student WHERE email = ?', [email], async (err, results) => {
+        if (err) {
+            console.log(err);
+        }
+        else {
+            if (results.length > 0) {
+                return res.redirect("/admin-dashboard")
+            }
+        }
+
+
+        connection.query("insert into student(student_name,dob,fathername,mobileno,gender,email,id_type,id_no,faculty,dept,issue,expiry,address_type,nationality,state,district,blk_no,ward_no) values(? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ?)", [stud_name, dob, father_name, mob_no, gen, email, id_type, id_no, faculty, dept, issuse, expiry, add_type, nationality, state, district, blockno, ward], async function (error, results, fields) {
+            if (error) {
+                console.log(error);
+            } else {
+                return res.redirect("/admin-dashboard");
             }
         })
     })

@@ -104,6 +104,7 @@ small {
   border-radius: 50%;
   overflow: hidden;
 }
+
 .profile-photo {
   width: 2.8rem;
   height: 2.8rem;
@@ -824,6 +825,15 @@ form.secActive .form.first {
   color: var(--color-dark);
 }
 
+/* .data-title {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 6px 0;
+  color: var(--color-dark);
+} */
+
 .registration form .fields {
   display: flex;
   align-items: center;
@@ -837,6 +847,37 @@ form .fields .input-field {
   flex-direction: column;
   margin: 4px 0;
 }
+
+/* .data-box {
+  outline: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-dark);
+  border-radius: 5px;
+  border: 1px solid var(--color-dark);
+  background-color: var(--color-white);
+  height: 30px;
+  display: flex;
+  width: calc(100% / 3 - 15px);
+  flex-direction: column;
+}
+
+.data-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  max-width: 100px;
+  width: 100%;
+  border: none;
+  outline: none;
+  color: var(--color-white);
+  border-radius: 5px;
+  margin: 25px 0;
+  background-color: var(--color-success);
+  transition: all 0.3s linear;
+  cursor: pointer;
+} */
 
 .input-field label {
   font-size: 12px;
@@ -879,8 +920,8 @@ select {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 45px;
-  max-width: 200px;
+  height: 30px;
+  max-width: 100px;
   width: 100%;
   border: none;
   outline: none;

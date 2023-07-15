@@ -39,4 +39,4 @@ connection.connect((err) => {
 app.use('/', require('./routes/pages'));
 app.use('/', require('./routes/auth'));
 
-app.listen(4500);
+app.listen(4500, ()=>{console.log("SERVER IS RUNNING ON PORT 4500")});
